@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title> &middot; Loaxert</title>
-  <meta name="title" content=" &middot; Loaxert" />
+  <title>Máquinas &middot; Loaxert</title>
+  <meta name="title" content="Máquinas &middot; Loaxert" />
   
   
   
@@ -57,10 +57,13 @@
   
   
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
   
   
   
@@ -71,13 +74,15 @@
   
   <meta property="og:url" content="http://localhost:1313/maquinas/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="Loaxert">
+  <meta property="og:title" content="Máquinas">
+  <meta property="og:description" content="{{ range .">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Loaxert">
+  <meta name="twitter:title" content="Máquinas">
+  <meta name="twitter:description" content="{{ range .">
 
   
   
@@ -145,6 +150,20 @@
   
   <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Loaxert</span>
+
+            
+            <img src="/logo.png" width="216" height="288"
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Loaxert" />
+            
+
+        </a>
+    </div>
     
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
@@ -422,7 +441,7 @@
 
  <header>
   
-  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"></h1>
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Máquinas</h1>
   <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
     
 
@@ -472,7 +491,16 @@
   <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
     
     <div class="min-w-0 min-h-0 max-w-prose">
-      
+      <p>{{ range .Pages }}
+{{ if .Params.image }}
+<div class="article-image">
+<img src="{{ .Params.image }}" alt="{{ .Title }}" class="featured-image" />
+</div>
+{{ end }}</p>
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <p>{{ .Summary }}</p>  <!-- Si quieres mostrar un resumen o descripción breve -->
+{{ end }}
+
     </div>
 
 
@@ -598,7 +626,13 @@
     
 
   
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Ir arriba" title="Ir arriba">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
