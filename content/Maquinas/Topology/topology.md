@@ -3,7 +3,6 @@ title: "Topology"
 date: "2025-02-21T17:00:00-05:00"
 draft: false
 tags: ["crontabs", "linux", "latex", "sudo", "subdominio", "file-read", "apache2", "pspy64"]
-image: "https://labs.hackthebox.com/storage/avatars/cbfa26b4a4044677e93779a44bbd458f.png"
 ---
 
 Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root
