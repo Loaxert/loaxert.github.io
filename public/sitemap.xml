@@ -22,11 +22,19 @@
   </url>
   <url>
     <loc>http://localhost:1313/challenges/</loc>
+    <lastmod>2025-02-20T17:00:00-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/challenges/onlyhacks/onlyhacks/</loc>
+    <lastmod>2025-02-20T17:00:00-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/htb/</loc>
+    <lastmod>2023-10-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
