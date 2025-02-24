@@ -1,7 +1,7 @@
 ---
 title: "Hack The Box"
 type: "section"
-date: 22-02-2025
+date: "2025-02-22T17:00:00-05:00"
 ---
 
 ## ¿Qué son las Máquinas en Hack The Box?
