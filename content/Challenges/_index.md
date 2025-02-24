@@ -1,0 +1,5 @@
+---
+title: "Máquinas"
+layout: "list" 
+---
+
