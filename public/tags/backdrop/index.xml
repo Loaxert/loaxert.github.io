@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backdrop on Loaxert</title>
+    <link>http://localhost:1313/tags/backdrop/</link>
+    <description>Recent content in Backdrop on Loaxert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
+    <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
+    <copyright>© 2025 Santiago Chavarro</copyright>
+    <lastBuildDate>Sat, 08 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/backdrop/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dog</title>
+      <link>http://localhost:1313/maquinas/dog/dog/</link>
+      <pubDate>Sat, 08 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/maquinas/dog/dog/</guid>
+      <description>Dog # Created: March 8, 2025 8:55 PM Tags: Backdrop, Bee, Linux, sudoers Descripción : Maquina sencilla en la que por medio de un git encontramos credenciales para poder luego hacer uso de un exploit con el cual obtendremos ejecucion de comandos para luego reusar las credenciales con los usuarios que podremos listar, para el root fue explotacion de un binario muy sencillo.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

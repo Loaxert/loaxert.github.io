@@ -1,42 +1,102 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Loaxert</title>
+    <title>Loaxert</title>
     <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Loaxert</description>
+    <description>Recent content on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Thu, 20 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Insecure Direct Object Reference (IDOR)</title>
-      <link>http://localhost:1313/tags/insecure-direct-object-reference-idor/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
+      <title>Apache2</title>
+      <link>http://localhost:1313/tags/apache2/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/insecure-direct-object-reference-idor/</guid>
+      <guid>http://localhost:1313/tags/apache2/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
+      <title>Crontabs</title>
+      <link>http://localhost:1313/tags/crontabs/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/web/</guid>
+      <guid>http://localhost:1313/tags/crontabs/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>XSS</title>
-      <link>http://localhost:1313/tags/xss/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
+      <title>File-Read</title>
+      <link>http://localhost:1313/tags/file-read/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/xss/</guid>
+      <guid>http://localhost:1313/tags/file-read/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Gnuplot</title>
+      <link>http://localhost:1313/tags/gnuplot/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/gnuplot/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>http://localhost:1313/tags/latex/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/latex/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pspy64</title>
+      <link>http://localhost:1313/tags/pspy64/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/pspy64/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Subdominio</title>
+      <link>http://localhost:1313/tags/subdominio/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/subdominio/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sudo</title>
+      <link>http://localhost:1313/tags/sudo/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/sudo/</guid>
       <description></description>
       
     </item>
