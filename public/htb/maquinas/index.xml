@@ -9,7 +9,17 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/htb/maquinas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/htb/maquinas/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Codify</title>
+      <link>http://localhost:1313/htb/maquinas/codify/</link>
+      <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/codify/</guid>
+      <description>Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</description>
+      
+    </item>
     
     <item>
       <title>Topology</title>
