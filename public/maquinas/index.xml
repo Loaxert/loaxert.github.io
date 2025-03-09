@@ -13,10 +13,10 @@
     
     <item>
       <title>Topology</title>
-      <link>http://localhost:1313/maquinas/topology/topology/</link>
+      <link>http://localhost:1313/maquinas/topology/</link>
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/maquinas/topology/topology/</guid>
+      <guid>http://localhost:1313/maquinas/topology/</guid>
       <description>Una maquina en la que tenemos que hacer una inyeccion latex para poder leer archivos y asi conseguir el hash del usuario para luego mediante una tarea recurrente ganar root Dificultad: Facil</description>
       
     </item>
