@@ -52,6 +52,16 @@
     </item>
     
     <item>
+      <title>Insecure Direct Object Reference (IDOR)</title>
+      <link>http://localhost:1313/tags/insecure-direct-object-reference-idor/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/insecure-direct-object-reference-idor/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Latex</title>
       <link>http://localhost:1313/tags/latex/</link>
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
@@ -67,6 +77,16 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Markdown Injection</title>
+      <link>http://localhost:1313/tags/markdown-injection/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/markdown-injection/</guid>
       <description></description>
       
     </item>
@@ -102,19 +122,9 @@
     </item>
     
     <item>
-      <title>Insecure Direct Object Reference (IDOR)</title>
-      <link>http://localhost:1313/tags/insecure-direct-object-reference-idor/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/insecure-direct-object-reference-idor/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Web</title>
       <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/web/</guid>
       <description></description>

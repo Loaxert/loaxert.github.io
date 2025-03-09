@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web on Loaxert</title>
-    <link>http://localhost:1313/tags/web/</link>
-    <description>Recent content in Web on Loaxert</description>
+    <title>Markdown Injection on Loaxert</title>
+    <link>http://localhost:1313/tags/markdown-injection/</link>
+    <description>Recent content in Markdown Injection on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/markdown-injection/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Armaxis</title>
@@ -18,16 +18,6 @@
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/challenges/armaxis/</guid>
       <description>Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.</description>
-      
-    </item>
-    
-    <item>
-      <title>OnlyHacks</title>
-      <link>http://localhost:1313/htb/challenges/onlyhacks/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/htb/challenges/onlyhacks/</guid>
-      <description>Al ingresar a la url tenemos la opcion de registrarnos y logearnos que es lo primero que vamos a hacer.</description>
       
     </item>
     
