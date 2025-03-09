@@ -14,22 +14,21 @@
   name = "HTB"
   pageRef = "HTB"
   weight = 10
-
-#[[main]]
-#  name = "Parent"
-#  weight = 20
+  url = "/HTB/"
 
 [[main]]
   name = "Maquinas"
   parent = "HTB"
   pageRef = "Maquinas"
   weight = 20
+  url = "/Maquinas/"
 
 [[main]]
   name = "Challenges"
   parent = "HTB"
   pageRef = "Challenges"
   weight = 20
+  url = "/Challenges/"
 
 #[[subnavigation]]
 #  name = "An interesting topic"

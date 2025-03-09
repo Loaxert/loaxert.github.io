@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Máquinas on Loaxert</title>
+    <title>Challenges on Loaxert</title>
     <link>http://localhost:1313/challenges/</link>
-    <description>Recent content in Máquinas on Loaxert</description>
+    <description>Recent content in Challenges on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>

@@ -1,5 +1,4 @@
 ---
-title: "Máquinas"
-layout: "list" 
+title: "Challenges"
+layout: "list"
 ---
-
