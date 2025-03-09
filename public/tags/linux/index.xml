@@ -21,5 +21,15 @@
       
     </item>
     
+    <item>
+      <title>GreenHorn</title>
+      <link>http://localhost:1313/htb/maquinas/greenhorn/</link>
+      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/greenhorn/</guid>
+      <description>Created: November 30, 2024 9:03 AM Tags: CVE, Linux</description>
+      
+    </item>
+    
   </channel>
 </rss>

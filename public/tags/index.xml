@@ -141,5 +141,35 @@
       
     </item>
     
+    <item>
+      <title>CVE</title>
+      <link>http://localhost:1313/tags/cve/</link>
+      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cve/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pluk</title>
+      <link>http://localhost:1313/tags/pluk/</link>
+      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/pluk/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>RCE</title>
+      <link>http://localhost:1313/tags/rce/</link>
+      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/rce/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

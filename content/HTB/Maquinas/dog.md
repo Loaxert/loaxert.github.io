@@ -6,10 +6,8 @@ draft: true
 tags: ["backdrop", "bee", "linux", "sudoers", "git-dumper"]
 ---
 
-# Dog
-
+### Descripción
 Maquina sencilla en la que por medio de un git encontramos credenciales para poder luego hacer uso de un exploit con el cual obtendremos ejecucion de comandos para luego reusar las credenciales con los usuarios que podremos listar, para el root fue explotacion de un binario muy sencillo.
-Dificultad: Facil
 
 # Enumeración
 
@@ -19,7 +17,7 @@ sudo nmap -sCV -p22,80 "$ip_target" -A -oN target
 ```
 <a href="https://imgur.com/tzfb8Ub"><img src="https://i.imgur.com/tzfb8Ub.png" title="source: imgur.com" /></a>
 
-Encontramos un git por lo que vamos a usar git-dumper y tratar de restaurar el git, primero vamos a instalar la herramienta.
+Encontramos un git por lo que vamos a usar git-dumper y tratar de restaurar el git, pero primero vamos a instalar la herramienta.
 
 ```jsx
 pipx install git-dumper
@@ -29,11 +27,11 @@ git reset --hard
 cat settings.php
 ```
 
-Y ahi tendremos una contraseña:
+Y ahí tendremos una contraseña:
 
 <a href="https://imgur.com/a38Rciw"><img src="https://i.imgur.com/a38Rciw.png" title="source: imgur.com" /></a>
 
-Para hallar usuarios validos lo vamos a hacer tambien en el git usando grep así:
+Para hallar usuarios validos lo vamos a hacer tambien en el git usando grep de la siguiente forma:
 
 ```jsx
 grep -r -i -l '@dog.htb' . 2>/dev/null
@@ -43,7 +41,7 @@ grep -r -i -l '@dog.htb' . 2>/dev/null
 
 # Puerto 80
 
-Ahora con ese usuario y contraseña podemos ingresar si miramos por la pagina encontraremos la verison en el link http://IP/?q=admin/reports/updates
+Ahora con ese usuario y contraseña podemos ingresar, si miramos por la pagina encontraremos la verison en el link http://IP/?q=admin/reports/updates
 
 <a href="https://imgur.com/C3nuz53"><img src="https://i.imgur.com/C3nuz53.png" title="source: imgur.com" /></a>
 
@@ -51,7 +49,7 @@ Y si buscamos encontraremos una vulnerabilidad de esta version [Exploit](https:/
 
 # Exploit
 
-Vamos a modificar el script para que en vez de .zip nos lo guarde en el formato haceptado .tar.gz
+Vamos a modificar el script para que en vez de .zip nos lo guarde en el formato aceptado .tar.gz
 
 ```jsx
 import os
@@ -158,7 +156,7 @@ Si listamos usuarios en el home veremos dos usuarios:
 
 <a href="https://imgur.com/XK8ClEV"><img src="https://i.imgur.com/XK8ClEV.png" title="source: imgur.com" /></a>
 
-Si reusamos la contraseña que teniamos con johncusak tendremos acceso a la flag de usuario.
+Usando de nuevo la contraseña que teniamos con johncusak tendremos acceso a la flag de usuario.
 
 # Root
 
@@ -166,11 +164,11 @@ Si listamos permisos sudoers tendremos el bin  `bee` :
 
 <a href="https://imgur.com/zImnC79"><img src="https://i.imgur.com/zImnC79.png" title="source: imgur.com" /></a>
 
-Si ejecutamos el binario veremos lo que podemos hacer entre esas hay una muy interesante en la cual podemos ejecutar codigo php:
+Si ejecutamos el binario veremos lo que podemos hacer, entre esas opciones hay una muy interesante en la cual podemos ejecutar codigo php:
 
 <a href="https://imgur.com/4H7qVEl"><img src="https://i.imgur.com/4H7qVEl.png" title="source: imgur.com" /></a>
 
-Por lo que vamos a tratar de darnos una bash como root:
+Con esta información vamos a tratar de obtener una bash como root:
 
 ```bash
 sudo bee eval "shell_exec('/bin/bash');”

