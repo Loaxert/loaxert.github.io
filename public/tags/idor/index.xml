@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XSS on Loaxert</title>
-    <link>http://localhost:1313/tags/xss/</link>
-    <description>Recent content in XSS on Loaxert</description>
+    <title>IDOR on Loaxert</title>
+    <link>http://localhost:1313/tags/idor/</link>
+    <description>Recent content in IDOR on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/idor/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Stocker</title>
-      <link>http://localhost:1313/htb/maquinas/stocker/</link>
-      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <title>Armaxis</title>
+      <link>http://localhost:1313/htb/challenges/armaxis/</link>
+      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/htb/maquinas/stocker/</guid>
-      <description>Descripción: # Maquina sencilla que mediante una inyección NoSQL podemos saltar un login y luego mediante un generador de PDF’s dinamicos listar archivos y hallat credenciales, en la escalada explotamos un permiso de sudoers Node</description>
+      <guid>http://localhost:1313/htb/challenges/armaxis/</guid>
+      <description>Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.</description>
       
     </item>
     

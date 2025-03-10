@@ -72,6 +72,66 @@
     </item>
     
     <item>
+      <title>Burpsuit</title>
+      <link>http://localhost:1313/tags/burpsuit/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/burpsuit/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cross-Site-Scripting</title>
+      <link>http://localhost:1313/tags/cross-site-scripting/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cross-site-scripting/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Inyección-NoSQL</title>
+      <link>http://localhost:1313/tags/inyecci%C3%B3n-nosql/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/inyecci%C3%B3n-nosql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PDF-Dinamico</title>
+      <link>http://localhost:1313/tags/pdf-dinamico/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/pdf-dinamico/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Server-Side</title>
+      <link>http://localhost:1313/tags/server-side/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/server-side/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>http://localhost:1313/tags/xss/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/xss/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Apache2</title>
       <link>http://localhost:1313/tags/apache2/</link>
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
@@ -112,11 +172,11 @@
     </item>
     
     <item>
-      <title>Insecure Direct Object Reference (IDOR)</title>
-      <link>http://localhost:1313/tags/insecure-direct-object-reference-idor/</link>
+      <title>IDOR</title>
+      <link>http://localhost:1313/tags/idor/</link>
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/insecure-direct-object-reference-idor/</guid>
+      <guid>http://localhost:1313/tags/idor/</guid>
       <description></description>
       
     </item>
@@ -177,16 +237,6 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/web/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>XSS</title>
-      <link>http://localhost:1313/tags/xss/</link>
-      <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/xss/</guid>
       <description></description>
       
     </item>

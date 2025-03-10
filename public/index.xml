@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Stocker</title>
+      <link>http://localhost:1313/htb/maquinas/stocker/</link>
+      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/stocker/</guid>
+      <description>Descripción: # Maquina sencilla que mediante una inyección NoSQL podemos saltar un login y luego mediante un generador de PDF’s dinamicos listar archivos y hallat credenciales, en la escalada explotamos un permiso de sudoers Node</description>
+      
+    </item>
+    
+    <item>
       <title>Armaxis</title>
       <link>http://localhost:1313/htb/challenges/armaxis/</link>
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>

@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sudoers on Loaxert</title>
-    <link>http://localhost:1313/tags/sudoers/</link>
-    <description>Recent content in Sudoers on Loaxert</description>
+    <title>Server-Side on Loaxert</title>
+    <link>http://localhost:1313/tags/server-side/</link>
+    <description>Recent content in Server-Side on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 07 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/sudoers/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Codify</title>
-      <link>http://localhost:1313/htb/maquinas/codify/</link>
-      <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/htb/maquinas/codify/</guid>
-      <description>Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</description>
-      
-    </item>
+    <lastBuildDate>Sat, 22 Feb 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/server-side/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Stocker</title>
