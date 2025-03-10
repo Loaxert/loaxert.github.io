@@ -3,7 +3,7 @@ title: "Armaxis"
 date: "2025-02-21T17:00:00-05:00"
 type: "challenges"
 draft: false
-tags: ["Web", "Insecure Direct Object Reference (IDOR)", "Markdown Injection"]
+tags: ["Web", "IDOR", "Markdown Injection"]
 ---
 
 Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.

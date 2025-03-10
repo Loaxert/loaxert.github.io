@@ -3,7 +3,7 @@ title: "OnlyHacks"
 date: "2025-02-20T17:00:00-05:00"
 type: "challenges"
 draft: false
-tags: ["Web", "Insecure Direct Object Reference (IDOR)", "XSS"]
+tags: ["Web", "IDOR", "XSS", "Cross-Site-Scripting"]
 ---
 
 Al ingresar a la url tenemos la opcion de registrarnos e iniciar sesión que es lo primero que vamos a hacer.
