@@ -9,7 +9,17 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 07 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Mar 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>EvilCups</title>
+      <link>http://localhost:1313/htb/maquinas/evilcups/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/evilcups/</guid>
+      <description>Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</description>
+      
+    </item>
     
     <item>
       <title>Codify</title>

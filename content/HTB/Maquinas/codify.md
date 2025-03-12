@@ -3,7 +3,7 @@ title: "Codify"
 date: "2025-03-07T00:04:43-05:00"
 type: "maquinas"
 draft: false
-tags: ["python", "sudoers", "linux", "pspy", "vm2", "sqlite3"]
+tags: ["python", "sudoers", "linux", "pspy", "vm2", "sqlite3", "nodejs"]
 ---
 
 ### Descripción:

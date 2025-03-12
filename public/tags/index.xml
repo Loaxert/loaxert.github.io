@@ -9,14 +9,84 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 07 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Mar 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CVE-2024-47076</title>
+      <link>http://localhost:1313/tags/cve-2024-47076/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cve-2024-47076/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CVE-2024-47175</title>
+      <link>http://localhost:1313/tags/cve-2024-47175/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cve-2024-47175/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CVE-2024-47176</title>
+      <link>http://localhost:1313/tags/cve-2024-47176/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cve-2024-47176/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>CVE-2024-47177</title>
+      <link>http://localhost:1313/tags/cve-2024-47177/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cve-2024-47177/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Linux</title>
       <link>http://localhost:1313/tags/linux/</link>
-      <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>RCE</title>
+      <link>http://localhost:1313/tags/rce/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/rce/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UDP</title>
+      <link>http://localhost:1313/tags/udp/</link>
+      <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/udp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>http://localhost:1313/tags/nodejs/</link>
+      <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/nodejs/</guid>
       <description></description>
       
     </item>
@@ -257,16 +327,6 @@
       <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/pluk/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>RCE</title>
-      <link>http://localhost:1313/tags/rce/</link>
-      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/rce/</guid>
       <description></description>
       
     </item>

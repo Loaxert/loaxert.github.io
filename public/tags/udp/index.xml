@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RCE on Loaxert</title>
-    <link>http://localhost:1313/tags/rce/</link>
-    <description>Recent content in RCE on Loaxert</description>
+    <title>UDP on Loaxert</title>
+    <link>http://localhost:1313/tags/udp/</link>
+    <description>Recent content in UDP on Loaxert</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Tue, 11 Mar 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/rce/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Mar 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/udp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>EvilCups</title>
@@ -18,16 +18,6 @@
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/evilcups/</guid>
       <description>Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</description>
-      
-    </item>
-    
-    <item>
-      <title>GreenHorn</title>
-      <link>http://localhost:1313/htb/maquinas/greenhorn/</link>
-      <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/htb/maquinas/greenhorn/</guid>
-      <description>Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.</description>
       
     </item>
     
