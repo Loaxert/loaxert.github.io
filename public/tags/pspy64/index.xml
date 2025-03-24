@@ -9,17 +9,7 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Fri, 21 Feb 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/pspy64/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Topology</title>
-      <link>http://localhost:1313/htb/maquinas/topology/</link>
-      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/htb/maquinas/topology/</guid>
-      <description>Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.</description>
-      
-    </item>
+    <atom:link href="http://localhost:1313/tags/pspy64/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

@@ -3,7 +3,7 @@ title: "Topology"
 date: "2025-02-21T17:00:00-05:00"
 type: "maquinas"
 draft: false
-tags: ["crontabs", "linux", "latex", "sudo", "subdominio", "file-read", "apache2", "pspy64", "gnuplot"]
+tags: ["crontabs", "linux", "latex", "sudo", "subdominio", "file-read", "apache-server", "pspy", "gnuplot"]
 ---
 
 ### Descripción:

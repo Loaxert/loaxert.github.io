@@ -3,7 +3,7 @@ title: "Certified"
 date: "2025-03-16T00:04:43-05:00"
 type: "maquinas"
 draft: false
-tags: ["BloodHund", "ESC9", "shadow credentials", "impacket", "netexec"]
+tags: ["BloodHund", "ESC9", "shadow-credentials", "impacket", "netexec"]
 ---
 
 ## Descripción: 

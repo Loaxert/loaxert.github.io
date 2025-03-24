@@ -9,7 +9,57 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Sun, 16 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apache-Server</title>
+      <link>http://localhost:1313/tags/apache-server/</link>
+      <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/apache-server/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cross-Site-Scripting</title>
+      <link>http://localhost:1313/tags/cross-site-scripting/</link>
+      <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/cross-site-scripting/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Markdown-Injection</title>
+      <link>http://localhost:1313/tags/markdown-injection/</link>
+      <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/markdown-injection/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Port-Fowarding</title>
+      <link>http://localhost:1313/tags/port-fowarding/</link>
+      <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/port-fowarding/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>http://localhost:1313/tags/xss/</link>
+      <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/tags/xss/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>BloodHund</title>
@@ -52,7 +102,7 @@
     </item>
     
     <item>
-      <title>Shadow Credentials</title>
+      <title>Shadow-Credentials</title>
       <link>http://localhost:1313/tags/shadow-credentials/</link>
       <pubDate>Sun, 16 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
@@ -202,16 +252,6 @@
     </item>
     
     <item>
-      <title>Cross-Site-Scripting</title>
-      <link>http://localhost:1313/tags/cross-site-scripting/</link>
-      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/cross-site-scripting/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Inyección-NoSQL</title>
       <link>http://localhost:1313/tags/inyecci%C3%B3n-nosql/</link>
       <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
@@ -237,26 +277,6 @@
       <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/server-side/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>XSS</title>
-      <link>http://localhost:1313/tags/xss/</link>
-      <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/xss/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Apache2</title>
-      <link>http://localhost:1313/tags/apache2/</link>
-      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/apache2/</guid>
       <description></description>
       
     </item>
@@ -307,26 +327,6 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/tags/latex/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Markdown Injection</title>
-      <link>http://localhost:1313/tags/markdown-injection/</link>
-      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/markdown-injection/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Pspy64</title>
-      <link>http://localhost:1313/tags/pspy64/</link>
-      <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
-      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/tags/pspy64/</guid>
       <description></description>
       
     </item>

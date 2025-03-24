@@ -3,7 +3,7 @@ title: "Alert"
 date: "2025-03-24T00:04:43-05:00"
 type: "maquinas"
 draft: false
-tags: ["Apache-server", "Port-Fowarding", "XSS", "Cross-Site-Scripting", "Markdown"]
+tags: ["Apache-server", "Port-Fowarding", "XSS", "Cross-Site-Scripting", "Markdown-injection"]
 ---
 
 ## Descripción:
