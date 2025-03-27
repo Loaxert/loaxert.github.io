@@ -17,7 +17,7 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/topology/</guid>
-      <description>Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.</description>
+      <description></description>
       
     </item>
     

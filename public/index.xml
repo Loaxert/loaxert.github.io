@@ -9,7 +9,17 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Mon, 24 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jerry</title>
+      <link>http://localhost:1313/htb/maquinas/jerry/</link>
+      <pubDate>Thu, 27 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/jerry/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Alert</title>
@@ -17,7 +27,7 @@
       <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/alert/</guid>
-      <description>Descripción: # Maquina en la cual se encuentra una visualizador de archivos Markdowns, vulnerable a xss cross site scripting, mediante una opcion para compartir los archivos .</description>
+      <description></description>
       
     </item>
     
@@ -27,7 +37,7 @@
       <pubDate>Sun, 16 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/certified/</guid>
-      <description>Descripción: # Maquina en la cual con las credenciales que nos proporcionan hacemos uso de bloodhund para poder cambiar de usuario usando la tecnica Shadow Credentials, para luego mediate de una herramienta encontrar la vulnerabilidad ESC9 y poder elevar privilegios.</description>
+      <description></description>
       
     </item>
     
@@ -37,7 +47,7 @@
       <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/evilcups/</guid>
-      <description>Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</description>
+      <description></description>
       
     </item>
     
@@ -47,7 +57,7 @@
       <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/codify/</guid>
-      <description>Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</description>
+      <description></description>
       
     </item>
     
@@ -57,7 +67,7 @@
       <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/stocker/</guid>
-      <description>Descripción: # Maquina sencilla que mediante una inyección NoSQL podemos saltar un login y luego mediante un generador de PDF’s dinamicos listar archivos y hallat credenciales, en la escalada explotamos un permiso de sudoers Node</description>
+      <description></description>
       
     </item>
     
@@ -67,7 +77,7 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/challenges/armaxis/</guid>
-      <description>Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.</description>
+      <description></description>
       
     </item>
     
@@ -77,7 +87,7 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/topology/</guid>
-      <description>Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.</description>
+      <description></description>
       
     </item>
     
@@ -87,7 +97,7 @@
       <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/challenges/onlyhacks/</guid>
-      <description>Al ingresar a la url tenemos la opcion de registrarnos e iniciar sesión que es lo primero que vamos a hacer.</description>
+      <description></description>
       
     </item>
     
@@ -97,7 +107,7 @@
       <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/greenhorn/</guid>
-      <description>Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.</description>
+      <description></description>
       
     </item>
     

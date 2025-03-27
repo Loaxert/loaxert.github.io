@@ -17,7 +17,7 @@
       <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/evilcups/</guid>
-      <description>Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</description>
+      <description></description>
       
     </item>
     
@@ -27,7 +27,7 @@
       <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/codify/</guid>
-      <description>Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</description>
+      <description></description>
       
     </item>
     
@@ -37,7 +37,7 @@
       <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/stocker/</guid>
-      <description>Descripción: # Maquina sencilla que mediante una inyección NoSQL podemos saltar un login y luego mediante un generador de PDF’s dinamicos listar archivos y hallat credenciales, en la escalada explotamos un permiso de sudoers Node</description>
+      <description></description>
       
     </item>
     
@@ -47,7 +47,7 @@
       <pubDate>Fri, 21 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/topology/</guid>
-      <description>Descripción: # Una máquina en la que tenemos que hacer una inyección LaTeX para poder leer archivos y así conseguir el hash del usuario, para luego, mediante una tarea recurrente, ganar root.</description>
+      <description></description>
       
     </item>
     
@@ -57,7 +57,7 @@
       <pubDate>Sat, 30 Nov 2024 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/greenhorn/</guid>
-      <description>Descripción : # Una máquina bastante sencilla en la que la enumeración es la clave para hallar la primera contraseña, que te servirá para usar un CVE y obtener una shell.</description>
+      <description></description>
       
     </item>
     

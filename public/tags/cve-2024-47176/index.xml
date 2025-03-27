@@ -17,7 +17,7 @@
       <pubDate>Tue, 11 Mar 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/evilcups/</guid>
-      <description>Descripción: # Maquina que nos pide explotar un CVE de el servicio CUPS donde podemos obtener una shell, el escalamiento es simplemente leer la documentación del servicio y leer un archivo descubriendo su nombre</description>
+      <description></description>
       
     </item>
     

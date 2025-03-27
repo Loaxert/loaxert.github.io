@@ -17,7 +17,7 @@
       <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/codify/</guid>
-      <description>Descripción: # Maquina muy entretenida que nos enseña a explotar una vulnerabilidad en la libreria vm2 para luego mediante una base de datos conseguir la flag de usuario para escalar privilegios mediante un permiso de sudoers que por una mala configuracion nos permite listar la contraseña de root.</description>
+      <description></description>
       
     </item>
     

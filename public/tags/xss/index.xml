@@ -17,7 +17,7 @@
       <pubDate>Mon, 24 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/alert/</guid>
-      <description>Descripción: # Maquina en la cual se encuentra una visualizador de archivos Markdowns, vulnerable a xss cross site scripting, mediante una opcion para compartir los archivos .</description>
+      <description></description>
       
     </item>
     
@@ -27,7 +27,7 @@
       <pubDate>Sat, 22 Feb 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/stocker/</guid>
-      <description>Descripción: # Maquina sencilla que mediante una inyección NoSQL podemos saltar un login y luego mediante un generador de PDF’s dinamicos listar archivos y hallat credenciales, en la escalada explotamos un permiso de sudoers Node</description>
+      <description></description>
       
     </item>
     
@@ -37,7 +37,7 @@
       <pubDate>Thu, 20 Feb 2025 17:00:00 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/challenges/onlyhacks/</guid>
-      <description>Al ingresar a la url tenemos la opcion de registrarnos e iniciar sesión que es lo primero que vamos a hacer.</description>
+      <description></description>
       
     </item>
     

@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
       <guid>http://localhost:1313/htb/maquinas/certified/</guid>
-      <description>Descripción: # Maquina en la cual con las credenciales que nos proporcionan hacemos uso de bloodhund para poder cambiar de usuario usando la tecnica Shadow Credentials, para luego mediate de una herramienta encontrar la vulnerabilidad ESC9 y poder elevar privilegios.</description>
+      <description></description>
       
     </item>
     
