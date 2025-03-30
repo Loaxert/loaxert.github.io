@@ -9,7 +9,17 @@
     <managingEditor>schavarrof@udistrital.edu.co (Santiago Chavarro)</managingEditor>
     <webMaster>schavarrof@udistrital.edu.co (Santiago Chavarro)</webMaster>
     <copyright>© 2025 Santiago Chavarro</copyright>
-    <lastBuildDate>Thu, 27 Mar 2025 00:04:43 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Mar 2025 17:00:00 -0500</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SpookyPass</title>
+      <link>http://localhost:1313/htb/challenges/spookypass/</link>
+      <pubDate>Sat, 29 Mar 2025 17:00:00 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/challenges/spookypass/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Jerry</title>
