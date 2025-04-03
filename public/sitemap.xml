@@ -3,25 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/htb/challenges/</loc>
-    <lastmod>2025-04-01T17:00:00-05:00</lastmod>
+    <loc>http://localhost:1313/htb/maquinas/</loc>
+    <lastmod>2025-04-19T00:04:43-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-01T17:00:00-05:00</lastmod>
+    <lastmod>2025-04-19T00:04:43-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/htb/challenges/</loc>
+    <lastmod>2025-03-29T17:00:00-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/htb/challenges/spookypass/</loc>
+    <lastmod>2025-03-29T17:00:00-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/htb/maquinas/jerry/</loc>
-    <lastmod>2025-03-27T00:04:43-05:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/htb/maquinas/</loc>
     <lastmod>2025-03-27T00:04:43-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
