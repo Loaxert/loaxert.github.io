@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Dog</title>
+      <link>http://localhost:1313/htb/maquinas/dog/</link>
+      <pubDate>Sat, 08 Mar 2025 00:04:43 -0500</pubDate>
+      <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
+      <guid>http://localhost:1313/htb/maquinas/dog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Codify</title>
       <link>http://localhost:1313/htb/maquinas/codify/</link>
       <pubDate>Fri, 07 Mar 2025 00:04:43 -0500</pubDate>

@@ -13,11 +13,11 @@
     
     <item>
       <title>Dog</title>
-      <link>http://localhost:1313/maquinas/dog/dog/</link>
+      <link>http://localhost:1313/htb/maquinas/dog/</link>
       <pubDate>Sat, 08 Mar 2025 00:04:43 -0500</pubDate>
       <author>schavarrof@udistrital.edu.co (Santiago Chavarro)</author>
-      <guid>http://localhost:1313/maquinas/dog/dog/</guid>
-      <description>Dog # Created: March 8, 2025 8:55 PM Tags: Backdrop, Bee, Linux, sudoers Descripción : Maquina sencilla en la que por medio de un git encontramos credenciales para poder luego hacer uso de un exploit con el cual obtendremos ejecucion de comandos para luego reusar las credenciales con los usuarios que podremos listar, para el root fue explotacion de un binario muy sencillo.</description>
+      <guid>http://localhost:1313/htb/maquinas/dog/</guid>
+      <description></description>
       
     </item>
     

@@ -4,13 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/htb/maquinas/</loc>
-    <lastmod>2025-05-12T20:00:00-05:00</lastmod>
+    <lastmod>2025-05-11T20:00:00-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/htb/maquinas/nocturnal/</loc>
+    <lastmod>2025-05-11T20:00:00-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-12T20:00:00-05:00</lastmod>
+    <lastmod>2025-05-11T20:00:00-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -53,6 +59,12 @@
   <url>
     <loc>http://localhost:1313/htb/maquinas/evilcups/</loc>
     <lastmod>2025-03-11T17:00:00-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/htb/maquinas/dog/</loc>
+    <lastmod>2025-03-08T00:04:43-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
