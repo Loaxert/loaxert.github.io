@@ -3,7 +3,7 @@ title: "Nocturnal"
 date: "2025-05-12T20:00:00-05:00"
 type: "maquinas"
 draft: true
-tags: ["Analisis-De-Codigo", "CVE", "CVE-2023-46818", "Caido", "Port forwarding", "ISPCONFIG"]
+tags: ["Analisis-De-Codigo", "CVE", "CVE-2023-46818", "Caido", "Port forwarding", "ISPCONFIG", "Sqlite3"]
 ---
 
 ### Descripción
